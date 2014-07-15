@@ -1,5 +1,6 @@
 var fs = require('fs');
 var crypto = require('crypto');
+var http = require('http');
 var https = require('https');
 var express = require('express');
 var session = require('express-session');
@@ -7,6 +8,11 @@ var session = require('express-session');
 var oauth = require('./lib/oauth');
 var github = require('./lib/github');
 var public = require('./lib/public');
+
+http.createServer(function(req, res) {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Huburn is served over SSL, change the address to start with "https".');
+}).listen(8080);
 
 var app = express();
 
@@ -27,4 +33,4 @@ var options = {
   cert: fs.readFileSync(__dirname + '/server.crt')
 };
 
-https.createServer(options, app).listen(8080);
+https.createServer(options, app).listen(8443);

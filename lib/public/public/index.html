@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="huburn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Huburn</title>
+    <meta name="description" content="burndown github issues agile scrum">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Huburn</a>
+        </div>
+        <a href="/login/oauth" class="navbar-right btn btn-default navbar-btn fa fa-github"> Sign in with GitHub</a>
+      </div>
+    </div>
+    <div class="container" ng-controller="burndownCtrl">
+      <ul>
+        <li ng-repeat="milestone in milestones track by $index">
+          {{ milestone.title }} : {{ milestone.points }}
+        </li>
+      </ul>
+      <ul>
+        <li ng-repeat="coord in burndown.coords">
+          {{ coord }}
+        </li>
+      </ul>
+      <huburn-velocity></huburn-velocity>
+    </div>
+    <script src="js/vendor/jquery-1.11.0.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/angular.min.js"></script>   
+    <script src="js/main.js"></script> 
+    <script src="js/burndown.js"></script>
+    <script src="js/d3.js"></script>
+  </body>
+</html>

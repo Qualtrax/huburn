@@ -19,3 +19,17 @@ Run tests
 ```
 grunt
 ```
+
+Config
+------
+
+A configuration file named config.js is required for huburn to operate. 
+
+```js
+module.exports = {
+  githubClientId: 'xxx',
+  githubClientSecret: 'xxxxxx'
+}
+```
+
+SSL certificate files 'server.crt' and 'server.key' are expected to exist in the root application folder.
