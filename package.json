@@ -1,5 +1,5 @@
 {
-  "name": "github-burndown",
+  "name": "huburn",
   "version": "0.0.0",
   "description": "Burndown chart for GitHub milestones",
   "main": "index.js",
