@@ -5,7 +5,7 @@ var https = require('https');
 var express = require('express');
 var session = require('express-session');
 
-var oauth = require('./lib/oauth');
+var oauth = require('./lib/oauth-github');
 var github = require('./lib/github');
 var public = require('./lib/public');
 

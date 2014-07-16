@@ -22,17 +22,7 @@
       </div>
     </div>
     <div class="container" ng-controller="burndownCtrl">
-      <ul>
-        <li ng-repeat="milestone in milestones track by $index">
-          {{ milestone.title }} : {{ milestone.points }}
-        </li>
-      </ul>
-      <ul>
-        <li ng-repeat="coord in burndown.coords">
-          {{ coord }}
-        </li>
-      </ul>
-      <huburn-velocity></huburn-velocity>
+      <huburn-velocity data="milestones"></huburn-velocity>
     </div>
     <script src="js/vendor/jquery-1.11.0.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
