@@ -4,33 +4,33 @@
    Author's custom styles
    ========================================================================== */
 
-body {
-  background-color: #333;
+@font-face {
+  font-family: 'HelveticaNeue-CondensedBold';
+  src: url('../fonts/HelveticaNeue-CondensedBold.otf');
 }
 
-h1 {
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../fonts/HelveticaNeue.ttf');
+}
+
+body {
+  background-color: #000;
+}
+
+h1,
+text {
   font-family: "HelveticaNeue-CondensedBold","Helvetica Neue","Arial Narrow",Arial,sans-serif;
-  color: #923820;
+  color: #E53820;
 }
 
 /* ==========================================================================
    svg styles
    ========================================================================== */
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #FFF;
-  shape-rendering: crispEdges;
-}
- 
 .axis text { 
   fill: #FFF;
   font-family: Consolas, "Andale Mono", "Courier New", monospace;
-  font-size: 0.75em;
-}
-
-.bar {
-  fill: #88C53F;
+  font-size: 1em;
 }
 
 .line {
@@ -39,15 +39,32 @@ h1 {
   stroke-width: 0.25em;
 }
 
+.velocity .axis path {
+  display: none;
+}
 
+.velocity .axis line {
+  fill: none;
+  stroke: #FFF;
+  stroke-opacity: 0.2;
+  shape-rendering: crispEdges;
+}
 
+.velocity .bar {
+  fill: #88C53F;
+}
 
+.burndown .axis path {
+  display: none;
+}
 
+.burndown .axis line {
+  shape-rendering: crispEdges;
+  stroke: #FFF;
+  stroke-opacity: 0.2;
+}
 
-
-
-
-
-
-
-
+.burndown .axis .minor line {
+  stroke: #FFF;
+  stroke-opacity: 0.2;
+}
