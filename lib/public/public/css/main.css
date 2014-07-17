@@ -5,12 +5,39 @@
    ========================================================================== */
 
 body {
-  background-color: #eee;
-  padding-top: 75px;
+  background-color: #333;
 }
 
+h1 {
+  font-family: "HelveticaNeue-CondensedBold","Helvetica Neue","Arial Narrow",Arial,sans-serif;
+  color: #923820;
+}
 
+/* ==========================================================================
+   svg styles
+   ========================================================================== */
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #FFF;
+  shape-rendering: crispEdges;
+}
+ 
+.axis text { 
+  fill: #FFF;
+  font-family: Consolas, "Andale Mono", "Courier New", monospace;
+  font-size: 0.75em;
+}
 
+.bar {
+  fill: #88C53F;
+}
+
+.line {
+  fill: none;
+  stroke: #5773CF;
+  stroke-width: 0.25em;
+}
 
 
 
