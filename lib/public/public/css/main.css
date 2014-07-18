@@ -15,7 +15,7 @@
 }
 
 body {
-  background-color: #000;
+  background-color: #FFF;
 }
 
 h1,
@@ -28,7 +28,7 @@ text {
    svg styles
    ========================================================================== */
 .axis text { 
-  fill: #FFF;
+  fill: #000;
   font-family: Consolas, "Andale Mono", "Courier New", monospace;
   font-size: 1em;
 }
@@ -39,18 +39,33 @@ text {
   stroke-width: 0.25em;
 }
 
+.badge {
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", "Arial Narrow", Arial, sans-serif;
+}
+
+.badge .title {
+  font-size: 2em;
+  fill: #E53820;
+  text-transform: uppercase;
+}
+
+.badge .value {
+  font-size: 4.8em;
+  fill: #000;
+}
+
 .velocity .axis path {
   display: none;
 }
 
 .velocity .axis line {
   fill: none;
-  stroke: #FFF;
+  stroke: #000;
   stroke-opacity: 0.2;
   shape-rendering: crispEdges;
 }
 
-.velocity .bar {
+.velocity .rect {
   fill: #88C53F;
 }
 
