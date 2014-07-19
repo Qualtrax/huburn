@@ -15,7 +15,7 @@
 }
 
 body {
-  background-color: #FFF;
+  background-color: #fafafa;
 }
 
 h1,
@@ -75,11 +75,11 @@ text {
 
 .burndown .axis line {
   shape-rendering: crispEdges;
-  stroke: #FFF;
+  stroke: #000;
   stroke-opacity: 0.2;
 }
 
 .burndown .axis .minor line {
-  stroke: #FFF;
+  stroke: #000;
   stroke-opacity: 0.2;
 }
