@@ -20,27 +20,59 @@ body {
 
 h1,
 text {
-  font-family: "HelveticaNeue-CondensedBold","Helvetica Neue","Arial Narrow",Arial,sans-serif;
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", "Arial Narrow", Arial, sans-serif;
   color: #E53820;
+}
+
+h1 {
+  font-size: 3em;
 }
 
 /* ==========================================================================
    svg styles
    ========================================================================== */
-.axis text { 
-  fill: #000;
-  font-family: Consolas, "Andale Mono", "Courier New", monospace;
-  font-size: 1em;
+
+.velocity {
+  width: 100%;
+  height: 100px;
 }
 
-.line {
+.velocity rect {
+  fill: #5773CF;
+}
+
+.burndown {
+  width: 100%;
+  height: 400px;
+}
+
+.burndown path {
   fill: none;
   stroke: #5773CF;
   stroke-width: 0.25em;
 }
 
-.badge {
-  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", "Arial Narrow", Arial, sans-serif;
+.burndown circle {
+  fill: #88C53F;
+  stroke: #5773CF;
+  stroke-width: 0.25em;
+}
+
+.axis path {
+  display: none;
+}
+
+.axis line {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: 0.2;
+  shape-rendering: crispEdges;
+}
+
+.axis text { 
+  fill: #000;
+  font-family: Consolas, "Andale Mono", "Courier New", monospace;
+  font-size: 1em;
 }
 
 .badge .title {
@@ -52,34 +84,4 @@ text {
 .badge .value {
   font-size: 4.8em;
   fill: #000;
-}
-
-.velocity .axis path {
-  display: none;
-}
-
-.velocity .axis line {
-  fill: none;
-  stroke: #000;
-  stroke-opacity: 0.2;
-  shape-rendering: crispEdges;
-}
-
-.velocity .rect {
-  fill: #88C53F;
-}
-
-.burndown .axis path {
-  display: none;
-}
-
-.burndown .axis line {
-  shape-rendering: crispEdges;
-  stroke: #000;
-  stroke-opacity: 0.2;
-}
-
-.burndown .axis .minor line {
-  stroke: #000;
-  stroke-opacity: 0.2;
 }
