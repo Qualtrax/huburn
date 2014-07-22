@@ -29,9 +29,13 @@ h1 {
 }
 
 .login {
-  width: 256px;
-  height: 256px;
   margin: 8em auto;
+}
+
+.login,
+.login img {
+  width: 18.286em;
+  height: 18.286em;
 }
 
 /* ==========================================================================
@@ -40,7 +44,7 @@ h1 {
 
 .velocity {
   width: 100%;
-  height: 100px;
+  height: 7.143em;
 }
 
 .velocity rect {
@@ -49,7 +53,7 @@ h1 {
 
 .burndown {
   width: 100%;
-  height: 400px;
+  height: 28.571em;
 }
 
 .burndown path {
