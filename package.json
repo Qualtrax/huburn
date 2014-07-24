@@ -17,7 +17,8 @@
     "karma-chrome-launcher": "~0.1.4",
     "karma-jasmine": "~0.1.5",
     "grunt-karma": "~0.8.3",
-    "jasmine-node": "~1.14.3"
+    "jasmine-node": "~1.14.3",
+    "less": "~1.7.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,0 +1,105 @@
+@blue: #5773CF;
+@green: #88C53F;
+@red: #E53820;
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+@font-face {
+  font-family: 'HelveticaNeue-CondensedBold';
+  src: url('../fonts/HelveticaNeue-CondensedBold.otf');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../fonts/HelveticaNeue.ttf');
+}
+
+body {
+  background-color: #fafafa;
+}
+
+h1,
+text {
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", "Arial Narrow", Arial, sans-serif;
+  color: @red;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.login {
+  margin: 8em auto;
+}
+
+.login,
+.login img {
+  width: 18.286em;
+  height: 18.286em;
+}
+
+/* ==========================================================================
+   svg styles
+   ========================================================================== */
+.velocity {
+  width: 100%;
+  height: 7.143em;
+}
+
+.velocity rect {
+  fill: @blue;
+}
+
+.burndown {
+  width: 100%;
+  height: 28.571em;
+}
+
+.burndown .burndown-line path {
+  fill: none;
+  stroke: @blue;
+  stroke-width: 0.25em;
+}
+
+.burndown .ideal-line path {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: 0.5;
+  stroke-width: 0.12em;
+}
+
+.burndown circle {
+  fill: @green;
+  stroke: @blue;
+  stroke-width: 0.25em;
+}
+
+.axis path {
+  display: none;
+}
+
+.axis line {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: 0.2;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  fill: #000;
+  font-family: Consolas, "Andale Mono", "Courier New", monospace;
+  font-size: 1em;
+}
+
+.badge .title {
+  font-size: 2em;
+  fill: @red;
+  text-transform: uppercase;
+}
+
+.badge .value {
+  font-size: 4.8em;
+  fill: #000;
+}
