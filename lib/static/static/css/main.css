@@ -1,104 +1,106 @@
-@blue: #5773CF;
-@green: #88C53F;
-@red: #E53820;
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
 @font-face {
   font-family: 'HelveticaNeue-CondensedBold';
   src: url('../fonts/HelveticaNeue-CondensedBold.otf');
 }
-
 @font-face {
   font-family: 'Helvetica Neue';
   src: url('../fonts/HelveticaNeue.ttf');
 }
-
 body {
   background-color: #fafafa;
 }
-
 h1,
 text {
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", "Arial Narrow", Arial, sans-serif;
-  color: @red;
+  color: #e53820;
 }
-
 h1 {
   font-size: 3em;
 }
-
 .login {
   margin: 8em auto;
 }
-
 .login,
 .login img {
   width: 18.286em;
   height: 18.286em;
 }
-
 /* ==========================================================================
    svg styles
    ========================================================================== */
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+.d3-tip.n:after {
+  margin: -2px 0 0 0;
+  top: 100%;
+  left: 0;
+}
 .velocity {
   width: 100%;
   height: 7.143em;
 }
-
 .velocity rect {
-  fill: @blue;
+  fill: #5773cf;
 }
-
 .burndown {
   width: 100%;
   height: 28.571em;
 }
-
 .burndown .burndown-line path {
   fill: none;
-  stroke: @blue;
+  stroke: #5773cf;
   stroke-width: 0.25em;
 }
-
 .burndown .ideal-line path {
   fill: none;
   stroke: #000;
   stroke-opacity: 0.5;
   stroke-width: 0.12em;
 }
-
 .burndown circle {
-  fill: @green;
-  stroke: @blue;
+  fill: #88c53f;
+  stroke: #5773cf;
   stroke-width: 0.25em;
 }
-
 .axis path {
   display: none;
 }
-
 .axis line {
   fill: none;
   stroke: #000;
   stroke-opacity: 0.2;
   shape-rendering: crispEdges;
 }
-
 .axis text {
   fill: #000;
   font-family: Consolas, "Andale Mono", "Courier New", monospace;
   font-size: 1em;
 }
-
 .badge .title {
   font-size: 2em;
-  fill: @red;
+  fill: #e53820;
   text-transform: uppercase;
 }
-
 .badge .value {
   font-size: 4.8em;
   fill: #000;

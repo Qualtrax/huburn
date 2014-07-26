@@ -7,7 +7,7 @@ var session = require('express-session');
 
 var oauth = require('./lib/oauth-github');
 var github = require('./lib/github');
-var public = require('./lib/public');
+var static = require('./lib/static');
 
 http.createServer(function(req, res) {
   res.writeHead(200, { 'Content-Type': 'text/plain' });
@@ -24,7 +24,14 @@ app.use(session({
   saveUninitialized: true
 }));
 
-app.use(public);
+app.use(function(req, res, next) {
+  if (!req.session.access_token && req.path.slice(0, 7) != '/login/')
+    res.redirect('/login/oauth');
+  else 
+    next();
+});
+
+app.use(static);
 app.use(oauth);
 app.use(github);
 
