@@ -20,13 +20,8 @@ text {
 h1 {
   font-size: 3em;
 }
-.login {
-  margin: 8em auto;
-}
-.login,
-.login img {
-  width: 18.286em;
-  height: 18.286em;
+.repo {
+  font-size: 1.25em;
 }
 /* ==========================================================================
    svg styles
