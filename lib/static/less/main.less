@@ -24,7 +24,7 @@ h1,
 h2,
 text {
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", "Arial Narrow", Arial, sans-serif;
-  color: @blue;
+  color: @red;
 }
 
 h1 {
@@ -74,8 +74,19 @@ h1 {
   fill: @blue;
 }
 
-.velocity rect.in-velocity {
-  fill: @green;
+.velocity rect:not(.met) {
+  fill: #aaa;
+}
+
+.velocity-axis path,
+.velocity-axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.velocity-axis text {
+  fill: @red;
 }
 
 .burndown {
@@ -127,11 +138,11 @@ h1 {
 
 .badge .title {
   font-size: 2em;
-  fill: @blue;
+  fill: @red;
   text-transform: uppercase;
 }
 
 .badge .value {
   font-size: 4.8em;
-  fill: @green;
+  fill: #000;
 }
