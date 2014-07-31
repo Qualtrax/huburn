@@ -75,10 +75,15 @@ h1 {
   stroke-opacity: 0.5;
   stroke-width: 0.12em;
 }
-.burndown circle {
+.burndown-line circle {
   fill: #88c53f;
   stroke: #5773cf;
   stroke-width: 0.25em;
+}
+.in-progress circle {
+  fill: #D78670;
+  stroke: #5773cf;
+  stroke-width: 0.18em;
 }
 .axis path {
   display: none;
