@@ -79,18 +79,18 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/lib\/public\/index.js": {
+	"\/lib\/static\/index.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/index.js",
-		"outputAbbreviatedPath": "\/lib\/public\/min\/index-min.js",
+		"inputAbbreviatedPath": "\/lib\/static\/index.js",
+		"outputAbbreviatedPath": "\/lib\/static\/min\/index-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/lib\/public\/less\/main.less": {
+	"\/lib\/static\/less\/main.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
 		"disableJavascript": 0,
@@ -98,10 +98,10 @@
 		"ieCompatibility": 1,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/less\/main.less",
-		"outputAbbreviatedPath": "\/lib\/public\/public\/css\/main.css",
+		"inputAbbreviatedPath": "\/lib\/static\/less\/main.less",
+		"outputAbbreviatedPath": "\/lib\/static\/static\/css\/main.css",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 2,
 		"relativeURLS": 0,
 		"shouldRunAutoprefixer": 0,
@@ -110,259 +110,248 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
-	"\/lib\/public\/public\/css\/bootstrap-social.css": {
+	"\/lib\/static\/static\/css\/bootstrap-social.css": {
 		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/public\/css\/bootstrap-social.css",
+		"inputAbbreviatedPath": "\/lib\/static\/static\/css\/bootstrap-social.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/lib\/public\/public\/css\/bootstrap-theme.css": {
+	"\/lib\/static\/static\/css\/bootstrap-theme.css": {
 		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/public\/css\/bootstrap-theme.css",
+		"inputAbbreviatedPath": "\/lib\/static\/static\/css\/bootstrap-theme.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/lib\/public\/public\/css\/bootstrap-theme.min.css": {
+	"\/lib\/static\/static\/css\/bootstrap-theme.min.css": {
 		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/public\/css\/bootstrap-theme.min.css",
+		"inputAbbreviatedPath": "\/lib\/static\/static\/css\/bootstrap-theme.min.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/lib\/public\/public\/css\/bootstrap.css": {
+	"\/lib\/static\/static\/css\/bootstrap.css": {
 		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/public\/css\/bootstrap.css",
+		"inputAbbreviatedPath": "\/lib\/static\/static\/css\/bootstrap.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/lib\/public\/public\/css\/bootstrap.min.css": {
+	"\/lib\/static\/static\/css\/bootstrap.min.css": {
 		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/public\/css\/bootstrap.min.css",
+		"inputAbbreviatedPath": "\/lib\/static\/static\/css\/bootstrap.min.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/lib\/public\/public\/css\/main.css": {
+	"\/lib\/static\/static\/css\/main.css": {
 		"fileType": 16,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/public\/css\/main.css",
+		"inputAbbreviatedPath": "\/lib\/static\/static\/css\/main.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/lib\/public\/public\/images\/github.png": {
+	"\/lib\/static\/static\/images\/github.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 24382,
-		"inputAbbreviatedPath": "\/lib\/public\/public\/images\/github.png",
-		"outputAbbreviatedPath": "\/lib\/public\/public\/images\/github.png",
+		"inputAbbreviatedPath": "\/lib\/static\/static\/images\/github.png",
+		"outputAbbreviatedPath": "\/lib\/static\/static\/images\/github.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/lib\/public\/public\/index.html": {
+	"\/lib\/static\/static\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/public\/index.html",
+		"inputAbbreviatedPath": "\/lib\/static\/static\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/lib\/public\/public\/js\/app.js": {
+	"\/lib\/static\/static\/js\/app.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/public\/js\/app.js",
-		"outputAbbreviatedPath": "\/lib\/public\/public\/js\/min\/app-min.js",
+		"inputAbbreviatedPath": "\/lib\/static\/static\/js\/app.js",
+		"outputAbbreviatedPath": "\/lib\/static\/static\/js\/min\/app-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/lib\/public\/public\/js\/burndownCalculator.js": {
+	"\/lib\/static\/static\/js\/burndownCalculator.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/public\/js\/burndownCalculator.js",
-		"outputAbbreviatedPath": "\/lib\/public\/public\/js\/min\/burndownCalculator-min.js",
+		"inputAbbreviatedPath": "\/lib\/static\/static\/js\/burndownCalculator.js",
+		"outputAbbreviatedPath": "\/lib\/static\/static\/js\/min\/burndownCalculator-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/lib\/public\/public\/js\/burndownCtrl.js": {
+	"\/lib\/static\/static\/js\/burndownCtrl.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/public\/js\/burndownCtrl.js",
-		"outputAbbreviatedPath": "\/lib\/public\/public\/js\/min\/burndownCtrl-min.js",
+		"inputAbbreviatedPath": "\/lib\/static\/static\/js\/burndownCtrl.js",
+		"outputAbbreviatedPath": "\/lib\/static\/static\/js\/min\/burndownCtrl-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/lib\/public\/public\/js\/d3.js": {
+	"\/lib\/static\/static\/js\/d3.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/public\/js\/d3.js",
-		"outputAbbreviatedPath": "\/lib\/public\/public\/js\/min\/d3-min.js",
+		"inputAbbreviatedPath": "\/lib\/static\/static\/js\/d3.js",
+		"outputAbbreviatedPath": "\/lib\/static\/static\/js\/min\/d3-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/lib\/public\/public\/js\/directives\/huburnBurndown.js": {
+	"\/lib\/static\/static\/js\/directives\/huburnBurndown.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/public\/js\/directives\/huburnBurndown.js",
-		"outputAbbreviatedPath": "\/lib\/public\/public\/js\/directives\/min\/huburnBurndown-min.js",
+		"inputAbbreviatedPath": "\/lib\/static\/static\/js\/directives\/huburnBurndown.js",
+		"outputAbbreviatedPath": "\/lib\/static\/static\/js\/directives\/min\/huburnBurndown-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/lib\/public\/public\/js\/directives\/huburnVelocity.js": {
+	"\/lib\/static\/static\/js\/directives\/huburnVelocity.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/public\/js\/directives\/huburnVelocity.js",
-		"outputAbbreviatedPath": "\/lib\/public\/public\/js\/directives\/min\/huburnVelocity-min.js",
+		"inputAbbreviatedPath": "\/lib\/static\/static\/js\/directives\/huburnVelocity.js",
+		"outputAbbreviatedPath": "\/lib\/static\/static\/js\/directives\/min\/huburnVelocity-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/lib\/public\/public\/js\/directives\/min\/huburnVelocity-min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/public\/js\/directives\/min\/huburnVelocity-min.js",
-		"outputAbbreviatedPath": "\/lib\/public\/public\/js\/directives\/min\/min\/huburnVelocity-min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/lib\/public\/public\/js\/min\/burndownCtrl-min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/public\/js\/min\/burndownCtrl-min.js",
-		"outputAbbreviatedPath": "\/lib\/public\/public\/js\/min\/min\/burndownCtrl-min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/lib\/public\/public\/js\/routes.js": {
+	"\/lib\/static\/static\/js\/repositoriesCtrl.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/public\/js\/routes.js",
-		"outputAbbreviatedPath": "\/lib\/public\/public\/js\/min\/routes-min.js",
+		"inputAbbreviatedPath": "\/lib\/static\/static\/js\/repositoriesCtrl.js",
+		"outputAbbreviatedPath": "\/lib\/static\/static\/js\/min\/repositoriesCtrl-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/lib\/public\/public\/js\/vendor\/angular-route.min.js": {
+	"\/lib\/static\/static\/js\/routes.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/public\/js\/vendor\/angular-route.min.js",
-		"outputAbbreviatedPath": "\/lib\/public\/public\/js\/vendor\/min\/angular-route.min-min.js",
+		"inputAbbreviatedPath": "\/lib\/static\/static\/js\/routes.js",
+		"outputAbbreviatedPath": "\/lib\/static\/static\/js\/min\/routes-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/lib\/public\/public\/js\/vendor\/angular.min.js": {
+	"\/lib\/static\/static\/js\/vendor\/angular-route.min.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/public\/js\/vendor\/angular.min.js",
-		"outputAbbreviatedPath": "\/lib\/public\/public\/js\/vendor\/min\/angular.min-min.js",
+		"inputAbbreviatedPath": "\/lib\/static\/static\/js\/vendor\/angular-route.min.js",
+		"outputAbbreviatedPath": "\/lib\/static\/static\/js\/vendor\/min\/angular-route.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/lib\/public\/public\/js\/vendor\/bootstrap.min.js": {
+	"\/lib\/static\/static\/js\/vendor\/angular.min.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/public\/js\/vendor\/bootstrap.min.js",
-		"outputAbbreviatedPath": "\/lib\/public\/public\/js\/vendor\/min\/bootstrap.min-min.js",
+		"inputAbbreviatedPath": "\/lib\/static\/static\/js\/vendor\/angular.min.js",
+		"outputAbbreviatedPath": "\/lib\/static\/static\/js\/vendor\/min\/angular.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/lib\/public\/public\/js\/vendor\/jquery-1.11.0.min.js": {
+	"\/lib\/static\/static\/js\/vendor\/bootstrap.min.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/public\/js\/vendor\/jquery-1.11.0.min.js",
-		"outputAbbreviatedPath": "\/lib\/public\/public\/js\/vendor\/min\/jquery-1.11.0.min-min.js",
+		"inputAbbreviatedPath": "\/lib\/static\/static\/js\/vendor\/bootstrap.min.js",
+		"outputAbbreviatedPath": "\/lib\/static\/static\/js\/vendor\/min\/bootstrap.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/lib\/public\/public\/js\/vendor\/modernizr-2.6.2-respond-1.1.0.min.js": {
+	"\/lib\/static\/static\/js\/vendor\/jquery-1.11.0.min.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/public\/js\/vendor\/modernizr-2.6.2-respond-1.1.0.min.js",
-		"outputAbbreviatedPath": "\/lib\/public\/public\/js\/vendor\/min\/modernizr-2.6.2-respond-1.1.0.min-min.js",
+		"inputAbbreviatedPath": "\/lib\/static\/static\/js\/vendor\/jquery-1.11.0.min.js",
+		"outputAbbreviatedPath": "\/lib\/static\/static\/js\/vendor\/min\/jquery-1.11.0.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/lib\/public\/public\/js\/vendor\/URI.js": {
+	"\/lib\/static\/static\/js\/vendor\/modernizr-2.6.2-respond-1.1.0.min.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/public\/js\/vendor\/URI.js",
-		"outputAbbreviatedPath": "\/lib\/public\/public\/js\/vendor\/min\/URI-min.js",
+		"inputAbbreviatedPath": "\/lib\/static\/static\/js\/vendor\/modernizr-2.6.2-respond-1.1.0.min.js",
+		"outputAbbreviatedPath": "\/lib\/static\/static\/js\/vendor\/min\/modernizr-2.6.2-respond-1.1.0.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/lib\/public\/public\/partials\/burndown.html": {
+	"\/lib\/static\/static\/js\/vendor\/URI.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/lib\/static\/static\/js\/vendor\/URI.js",
+		"outputAbbreviatedPath": "\/lib\/static\/static\/js\/vendor\/min\/URI-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/lib\/static\/static\/partials\/burndown.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/public\/partials\/burndown.html",
+		"inputAbbreviatedPath": "\/lib\/static\/static\/partials\/burndown.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/lib\/public\/public\/partials\/login.html": {
+	"\/lib\/static\/static\/partials\/repositories.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/lib\/public\/public\/partials\/login.html",
+		"inputAbbreviatedPath": "\/lib\/static\/static\/partials\/repositories.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
