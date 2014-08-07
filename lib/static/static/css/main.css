@@ -51,15 +51,22 @@ h1 {
   top: 100%;
   left: 0;
 }
+.d3-tip .met {
+  color: #5773cf;
+}
+.d3-tip .not-met {
+  color: #aaa;
+}
 .velocity {
   width: 100%;
-  height: 8em;
+  height: 10em;
 }
 .velocity rect {
   fill: #5773cf;
 }
 .velocity rect:not(.met) {
-  fill: #879F86;
+  fill: #aaa;
+  opacity: 0.9;
 }
 .velocity-axis path,
 .velocity-axis line {
