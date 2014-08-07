@@ -1,1 +1,1 @@
-docker build --no-cache huburn-image .
+docker build --no-cache -t huburn-image .

@@ -7,7 +7,6 @@ RUN apt-get -y install software-properties-common
 RUN add-apt-repository -y ppa:chris-lea/node.js
 RUN apt-get -y update
 
-RUN apt-get -y upgrade
 RUN apt-get install -y git nodejs supervisor
 
 RUN git clone -b master https://github.com/qualtrax/huburn /var/www/huburn
