@@ -12,6 +12,7 @@ RUN apt-get install -y git nodejs supervisor
 RUN git clone -b master https://github.com/qualtrax/huburn /var/www/huburn
 RUN cd /var/www/huburn && npm install
 ADD config.js /var/www/huburn/config.js
+ADD server.ca-bundle /var/www/huburn/server.ca-bundle
 ADD server.key /var/www/huburn/server.key
 ADD server.crt /var/www/huburn/server.crt
 
