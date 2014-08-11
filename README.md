@@ -9,25 +9,11 @@ A configuration file named config.js is required for huburn to operate.
 
 ```js
 module.exports = {
-  githubClientId: 'xxx',
-  githubClientSecret: 'xxxxxx'
+  githubClientId: 'xxx', 
+  githubClientSecret: 'xxxxxx',
+  sslCaBundlePath: '/ssl.ca-bundle',  # Must exist, but can be empty when using self-signed
+  sslKeyPath: '/ssl.key',
+  sslCertPath: '/ssl.crt'
 }
 ```
 
-SSL certificate files 'server.crt' and 'server.key' are expected to exist in the root application folder.
-
-Development
------------
-
-Install dependencies
-
-```
-npm install
-```
-
-
-Run tests
-
-```
-grunt
-```

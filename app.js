@@ -5,6 +5,7 @@ var https = require('https');
 var express = require('express');
 var session = require('express-session');
 
+var config = require('./config.js');
 var oauth = require('./lib/oauth-github');
 var github = require('./lib/github');
 var static = require('./lib/static');
@@ -36,9 +37,9 @@ app.use(oauth);
 app.use(github);
 
 var options = {
-  ca: fs.readFileSync(__dirname + '/server.ca-bundle'),
-  key: fs.readFileSync(__dirname + '/server.key'),
-  cert: fs.readFileSync(__dirname + '/server.crt')
+  ca: fs.readFileSync(__dirname + config.sslCaBundlePath),
+  key: fs.readFileSync(__dirname + config.sslKeyPath),
+  cert: fs.readFileSync(__dirname + config.sslCertPath)
 };
 
 https.createServer(options, app).listen(8443);
