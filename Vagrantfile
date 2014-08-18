@@ -8,14 +8,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.cpus = 2
   end
 
-  config.vm.network "forwarded_port", guest: 80, host: 8080, auto_correct: true
-  config.vm.network "forwarded_port", guest: 443, host: 8443, auto_correct: true
+  config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 443, host: 8443
 
   config.vm.provision "docker" do |d|
-    d.build_image "/vagrant/", 
-      args: "-t huburn-image"
-
-    d.run "huburn-image",
-      args: "-p 80:8080 -p 443:8443"
+    d.run "efouts/huburn",
+      args: "-p 80:8080 -p 443:8443 -v .:/huburn"
   end
 end

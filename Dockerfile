@@ -9,9 +9,6 @@ RUN apt-get -y update
 
 RUN apt-get install -y git nodejs supervisor
 
-ADD . /var/www/huburn
-RUN cd /var/www/huburn && npm install
-
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 EXPOSE 8080
