@@ -1,4 +1,3 @@
-exports.config = {
-  seleniumAddress: 'https://localhost:4444/wd/hub',
+exports.config = { 
   specs: ['tests/integration/smoke.js']
 }

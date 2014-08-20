@@ -1,4 +1,4 @@
 module.exports = {
-	githubLogin: "efouts",
-	githubPassword: "Geronimollama1"
+	githubLogin: "huburn-test",
+	githubPassword: "Huburn1"
 }
