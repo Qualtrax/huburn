@@ -118,7 +118,7 @@ h1 {
 }
 .badge .title {
   font-size: 2em;
-  fill: #e53820;
+  fill: #000;
   text-transform: uppercase;
 }
 .badge .value {
