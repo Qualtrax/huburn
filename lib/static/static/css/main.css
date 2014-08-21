@@ -16,7 +16,7 @@ h1,
 h2,
 text {
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", "Arial Narrow", Arial, sans-serif;
-  color: #e53820;
+  color: #000;
 }
 h1 {
   font-size: 3em;
@@ -75,7 +75,7 @@ h1 {
   shape-rendering: crispEdges;
 }
 .velocity-axis text {
-  fill: #e53820;
+  fill: #000;
 }
 .burndown {
   width: 100%;
