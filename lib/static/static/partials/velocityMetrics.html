@@ -1,0 +1,37 @@
+<div class="row velocity-metrics">
+  <div class="col title">
+    <p>LAST 6<br />SPRINTS</p>
+  </div>
+  <div class="col met">
+    <p class="value">{{ data.met.value }}</p>
+    <p class="units">SPRINTS<br />MET</p>
+  </div>
+  <div class="col points">
+    <p class="value">{{ data.points.value | number:1 }}</p>
+    <div class="units">
+        <div class="quotient">POINTS</div>
+        <div class="divisor">SPRINT</div>
+    </div>
+  </div>
+  <div class="col freerange">
+    <p class="value">{{ data.freeranges.value | number:1 }}</p>
+    <div class="units">
+        <div class="quotient">FREERANGES</div>
+        <div class="divisor">SPRINT</div>
+    </div>
+  </div>
+  <div class="col firelane">
+    <p class="value">{{ data.firelanes.value | number:1 }}</p>
+    <div class="units">
+        <div class="quotient">FIRELANES</div>
+        <div class="divisor">SPRINT</div>
+    </div>
+  </div>
+   <div class="col escalations">
+    <p class="value">{{ data.escalations.value | number:1 }}</p>
+    <div class="units">
+        <div class="quotient">ESCALATIONS</div>
+        <div class="divisor">SPRINT</div>
+    </div>
+  </div>
+</div>
