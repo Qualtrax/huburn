@@ -27,8 +27,9 @@ h1 {
 }
 .velocity-metrics .title {
   float: left;
-  font-size: 2em;
+  font-size: 1.5em;
   line-height: 1em;
+  padding-left: 2em;
   padding-right: 2em;
 }
 .velocity-metrics .value {
