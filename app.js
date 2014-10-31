@@ -37,7 +37,6 @@ app.use(oauth);
 app.use(github);
 
 var options = {
-  ca: fs.readFileSync(__dirname + config.sslCaBundlePath),
   key: fs.readFileSync(__dirname + config.sslKeyPath),
   cert: fs.readFileSync(__dirname + config.sslCertPath)
 };
