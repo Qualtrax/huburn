@@ -8,6 +8,7 @@ RUN add-apt-repository -y ppa:chris-lea/node.js
 RUN apt-get -y update
 
 RUN apt-get install -y git nodejs supervisor
+RUN apt-get install --only-upgrade -y bash
 
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
