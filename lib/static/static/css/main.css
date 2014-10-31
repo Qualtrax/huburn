@@ -166,3 +166,15 @@ h1 {
 .red {
   color: #FF1400;
 }
+.badge .super-green {
+  fill: #00B205;
+}
+.badge .green {
+  fill: #99CC00;
+}
+.badge .yellow {
+  fill: #FFB300;
+}
+.badge .red {
+  fill: #FF1400;
+}
