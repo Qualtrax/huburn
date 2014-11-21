@@ -11,8 +11,24 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>    
   </head>
-  <body>    
-    <div class="container" ng-view></div>
+  <body class="full-body">
+    <div ng-controller="navigationCtrl as vm">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Huburn</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li><a href="#/repositories">Repositories</a></li>
+                    <li ng-show="vm.route.length > 0"><a href="#/{{vm.route}}/{{vm.repo}}">{{vm.title}}</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://github.com/Qualtrax/huburn">Huburn on GitHub</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container body-content" ng-view></div>
 
     <script src="js/vendor/angular.min.js"></script> 
     <script src="js/vendor/angular-route.min.js"></script> 
@@ -21,8 +37,11 @@
     <script src="js/routes.js"></script> 
     <script src="js/burndownCalculator.js"></script>
     <script src="js/velocityMetrics.js"></script>
+    <script src="js/navigationService.js"></script>
     <script src="js/burndownCtrl.js"></script>
     <script src="js/repositoriesCtrl.js"></script>
+    <script src="js/navigationCtrl.js"></script>
+    <script src="js/availabilityCtrl.js"></script>
     <script src="js/directives/huburnBurndown.js"></script>
     <script src="js/directives/huburnVelocityGraph.js"></script>
     <script src="js/directives/huburnVelocityMetrics.js"></script>
