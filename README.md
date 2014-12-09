@@ -16,3 +16,11 @@ module.exports = {
 }
 ```
 
+Less
+----
+
+To compile LESS, run the following command:
+
+```
+node node_modules/less/bin/lessc lib/static/less/main.less > lib/static/static/css/main.css
+```
