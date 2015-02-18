@@ -1,204 +1,311 @@
 @blue: #5773CF;
 @green: #88C53F;
 @red: #E53820;
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
 @font-face {
-  font-family: 'HelveticaNeue-CondensedBold';
-  src: url('../fonts/HelveticaNeue-CondensedBold.otf');
+    font-family: 'HelveticaNeue-CondensedBold';
+    src: url('../fonts/HelveticaNeue-CondensedBold.otf');
 }
 
 @font-face {
-  font-family: 'Helvetica Neue';
-  src: url('../fonts/HelveticaNeue.ttf');
+    font-family: 'Helvetica Neue';
+    src: url('../fonts/HelveticaNeue.ttf');
 }
 
 body {
-  background-color: #fafafa;
+    background-color: #fafafa;
+    margin-top: 20px;
 }
 
 h1,
 h2,
 text,
-.velocity-metrics { 
-  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", "Arial Narrow", Arial, sans-serif;
-  color: #000;
+.velocity-metrics {
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", "Arial Narrow", Arial, sans-serif;
+    color: #000;
 }
 
 h1 {
-  font-size: 3em;
+    font-size: 3em;
 }
 
 .repo {
-  font-size: 1.25em;
+    font-size: 1.25em;
 }
 
-.velocity-metrics .title { 
-  float: left;
-  font-size: 2em;
-  line-height: 1em;
-  padding-top: 0.375em;
+.velocity-metrics .title {
+    float: left;
+    font-size: 2em;
+    line-height: 1em;
+    padding-top: 0.375em;
 }
 
 .velocity-metrics .value {
-  float: left;
-  font-size: 3.5em;
-  line-height: 1em;
+    float: left;
+    font-size: 3.5em;
+    line-height: 1em;
 }
 
 .velocity-metrics .units {
-  color: #aaa;
-  float: left;
-  padding: 0.5em 0 0 0.25em;
-  font-size: 1em;
-  line-height: 1em;
+    color: #aaa;
+    float: left;
+    padding: 0.5em 0 0 0.25em;
+    font-size: 1em;
+    line-height: 1em;
 }
 
 .velocity-metrics .quotient {
-  border-bottom: 2px solid #aaa;
+    border-bottom: 2px solid #aaa;
 }
 
 .velocity-metrics .quotient,
 .velocity-metrics .divisor {
-  text-align: center;
+    text-align: center;
 }
 
 .velocity-metrics .met .units {
-  padding-top: 0.65em;
+    padding-top: 0.65em;
 }
-
 /* ==========================================================================
    svg styles
    ========================================================================== */
+
 .d3-tip {
-  line-height: 1;
-  font-weight: bold;
-  padding: 12px;
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  border-radius: 2px;
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
 }
 
 .d3-tip:after {
-  box-sizing: border-box;
-  display: inline;
-  font-size: 10px;
-  width: 100%;
-  line-height: 1;
-  color: rgba(0, 0, 0, 0.8);
-  content: "\25BC";
-  position: absolute;
-  text-align: center;
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
 }
 
 .d3-tip.n:after {
-  margin: -2px 0 0 0;
-  top: 100%;
-  left: 0;
+    margin: -2px 0 0 0;
+    top: 100%;
+    left: 0;
 }
 
 .d3-tip .met {
-  color: @blue;
+    color: @blue;
 }
 
 .d3-tip .not-met {
-  color: #aaa;
+    color: #aaa;
 }
 
 .velocity {
-  width: 100%;
+    width: 100%;
 }
 
 .velocity rect {
-  fill: #5773cf;
+    fill: #5773cf;
 }
 
 .velocity rect:not(.met) {
-  fill: #aaa;
-  opacity: 0.9;
+    fill: #aaa;
+    opacity: 0.9;
 }
 
 .velocity-axis path,
 .velocity-axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
 }
 
 .velocity-axis text {
-  fill: #000;
+    fill: #000;
 }
 
-.burndown {
-  width: 100%;
-  height: 28.571em;
+.burn {
+    width: 100%;
+    height: 28.571em;
 }
 
-.burndown .burndown-line path {
-  fill: none;
-  stroke: @blue;
-  stroke-width: 0.25em;
+.burn .burn-line path {
+    fill: none;
+    stroke: @blue;
+    stroke-width: 0.25em;
 }
 
-.burndown .ideal-line path {
-  fill: none;
-  stroke: #000;
-  stroke-opacity: 0.5;
-  stroke-width: 0.12em;
+.burn .ideal-line path {
+    fill: none;
+    stroke: #000;
+    stroke-opacity: 0.5;
+    stroke-width: 0.12em;
 }
 
-.burndown-line circle {
-  fill: @green;
-  stroke: @blue;
-  stroke-width: 0.25em;
+.burn-line circle {
+    fill: @green;
+    stroke: @blue;
+    stroke-width: 0.25em;
 }
 
 .in-progress circle {
-  fill: #9C6732;
-  stroke: @blue;
-  stroke-width: 0.18em;
+    fill: #9C6732;
+    stroke: @blue;
+    stroke-width: 0.18em;
 }
 
 .axis path {
-  display: none;
+    display: none;
 }
 
 .axis line {
-  fill: none;
-  stroke: #000;
-  stroke-opacity: 0.2;
-  shape-rendering: crispEdges;
+    fill: none;
+    stroke: #000;
+    stroke-opacity: 0.2;
+    shape-rendering: crispEdges;
 }
 
 .axis text {
-  fill: #000;
-  font-family: Consolas, "Andale Mono", "Courier New", monospace;
-  font-size: 1em;
+    fill: #000;
+    font-family: Consolas, "Andale Mono", "Courier New", monospace;
+    font-size: 1em;
 }
 
 .badge .title {
-  font-size: 2em;
-  fill: #000;
-  text-transform: uppercase;
+    font-size: 2em;
+    fill: #000;
+    text-transform: uppercase;
 }
 
 .badge .value {
-  font-size: 4.8em;
-  fill: #000;
+    font-size: 4.8em;
+    fill: #000;
 }
 
-.super-green { color: #00B205; }
-.green { color: #99CC00; }
-.yellow { color: #FFB300; }
-.red { color: #FF1400; }
+.super-green {
+    color: #00B205;
+}
 
-.badge .super-green { fill: #00B205; }
-.badge .green { fill: #99CC00; }
-.badge .yellow { fill: #FFB300; }
-.badge .red { fill: #FF1400; }
+.green {
+    color: #99CC00;
+}
+
+.yellow {
+    color: #FFB300;
+}
+
+.red {
+    color: #FF1400;
+}
+
+.badge .super-green {
+    fill: #00B205;
+}
+
+.badge .green {
+    fill: #99CC00;
+}
+
+.badge .yellow {
+    fill: #FFB300;
+}
+
+.badge .red {
+    fill: #FF1400;
+}
+
 .body-content {
     padding-top: 70px;
+}
+
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.flex-item {
+    background: #0667A2;
+    width: 30%;
+    @media only screen and (max-width: 768px) {
+        width: 250px;
+        margin-top: 10px;
+    }
+    padding-bottom: 5%;
+    padding-top: 1%;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+}
+
+.link-text {
+    font-size: 50px;
+    @media only screen and (max-width: 1200px) {
+        font-size: 40px;
+    }
+    @media only screen and (max-width: 768px) {
+        font-size: 30px;
+    }
+}
+
+.landing-link {
+    width: 100%;
+    height: 100%;
+    color: white;
+    opacity: 0.7;
+}
+
+.landing-link > span {
+    width: 100%;
+}
+
+.landing-link:hover {
+    color: white;
+    opacity: 1;
+    text-decoration: none;
+}
+
+.glyphicon-fire:hover {
+    color: orange;
+    opacity: 1;
+}
+
+.loader {
+    margin: Auto 0;
+    height: 100px;
+    width: 20%;
+    text-align: center;
+    padding: 1em;
+    margin: 0 auto 1em;
+    display: inline-block;
+    vertical-align: center;
+}
+
+svg path,
+svg rect {
+    fill: #88C53F;
+}
+
+a:focus {
+    outline: none;
+}
+
+.navbar {
+    z-index: 10000000;
 }

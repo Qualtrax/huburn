@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="huburn">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Huburn</title>
@@ -9,41 +10,64 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>    
-  </head>
-  <body class="full-body">
-    <div ng-controller="navigationCtrl as vm">
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" ng-controller="navigationCtrl as vm">
+        <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Huburn</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Huburn</a>
             </div>
-            <div>
-                <ul class="nav navbar-nav">
-                    <li><a href="#/repositories">Repositories</a></li>
-                    <li ng-show="vm.route.length > 0"><a href="#/{{vm.route}}/{{vm.repo}}">{{vm.title}}</a></li>
-                </ul>
+            <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="https://github.com/Qualtrax/huburn">Huburn on GitHub</a></li>
+                    <li><a href="#/repositories">Repositories</a>
+                    </li>
+                    <li ng-show="vm.repo.length > 0"><a href="#/burnup/{{vm.repo}}">Burnup</a>
+                    </li>
+                    <li ng-show="vm.repo.length > 0"><a href="#/availability/{{vm.repo}}">Availability Calculator</a>
+                    </li>
+                    <li ng-show="vm.repo.length > 0"><a href="#/burndown/{{vm.repo}}">Burndown</a>
+                    </li>
+                    <li><a href="https://github.com/Qualtrax/huburn">Huburn on GitHub</a>
+                    </li>
                 </ul>
             </div>
-        </nav>
+        </div>
     </div>
     <div class="container body-content" ng-view></div>
 
-    <script src="js/vendor/angular.min.js"></script> 
-    <script src="js/vendor/angular-route.min.js"></script> 
+    <script src="js/vendor/angular.min.js"></script>
+    <script src="js/vendor/angular-route.min.js"></script>
+    <script src="js/vendor/jquery-1.11.0.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/jquery.popupoverlay.js"></script>
     <script src="js/d3.js"></script>
-    <script src="js/app.js"></script> 
-    <script src="js/routes.js"></script> 
+    <script src="js/app.js"></script>
+    <script src="js/routes.js"></script>
+    <script src='js/services/availabilityService.js'></script>
     <script src="js/burndownCalculator.js"></script>
+    <script src="js/burnupCalculator.js"></script>
     <script src="js/velocityMetrics.js"></script>
-    <script src="js/navigationService.js"></script>
-    <script src="js/burndownCtrl.js"></script>
-    <script src="js/repositoriesCtrl.js"></script>
-    <script src="js/navigationCtrl.js"></script>
-    <script src="js/availabilityCtrl.js"></script>
-    <script src="js/directives/huburnBurndown.js"></script>
+    <script src="js/services/navigationService.js"></script>
+    <script src='js/services/gitHubService.js'></script>
+    <script src="js/controllers/burndownCtrl.js"></script>
+    <script src="js/controllers/burnupCtrl.js"></script>
+    <script src="js/controllers/repositoriesCtrl.js"></script>
+    <script src="js/controllers/navigationCtrl.js"></script>
+    <script src="js/controllers/availabilityCtrl.js"></script>
+    <script src="js/controllers/landingCtrl.js"></script>
+    <script src="js/directives/huburnLoading.js"></script>
+    <script src="js/directives/huburnBurndownGraph.js"></script>
     <script src="js/directives/huburnVelocityGraph.js"></script>
     <script src="js/directives/huburnVelocityMetrics.js"></script>
-  </body>
+    <script src="js/directives/huburnBurnupGraph.js"></script>
+</body>
+
 </html>

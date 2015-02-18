@@ -2,22 +2,22 @@
   <div class="col-sm-2 title">
     <p>Results</p>
   </div>
-  <div class="col-sm-2 met">
+  <div class="col-sm-2 met" ng-show="showMet">
     <p class="value {{ closedIterationData.met.class }}">{{ closedIterationData.met.value }}</p>
-    <p class="units">SPRINTS<br />MET</p>
+    <p class="units">ITERATIONS <br />MET</p>
   </div>
   <div class="col-sm-2 points">
     <p class="value">{{ closedIterationData.points.value | number:1 }}</p>
     <div class="units">
       <div class="quotient">POINTS</div>
-      <div class="divisor">SPRINT</div>
+      <div class="divisor">ITERATION</div>
     </div>
   </div>
   <div class="col-sm-2 freerange">
     <p class="value {{ closedIterationData.freeranges.class }}">{{ closedIterationData.freeranges.value | number:1 }}</p>
     <div class="units">
       <div class="quotient">FREERANGES</div>
-      <div class="divisor">SPRINT</div>
+      <div class="divisor">ITERATION</div>
     </div>
   </div>
   <div class="col-sm-2 zeroDefectBacklog">
@@ -37,35 +37,35 @@
     <p class="value {{ closedIterationData.firelanes.class }}">{{ closedIterationData.firelanes.value | number:1 }}</p>
     <div class="units">
       <div class="quotient">FIRELANES</div>
-      <div class="divisor">SPRINT</div>
+      <div class="divisor">ITERATION</div>
     </div>
   </div>
   <div class="col-sm-2 scope-changes">
     <p class="value {{ closedIterationData.scopeChanges.class }}">{{ closedIterationData.scopeChanges.value | number:1 }}</p>
     <div class="units">
       <div class="quotient">SCOPE CHANGES</div>
-      <div class="divisor">SPRINT</div>
+      <div class="divisor">ITERATION</div>
     </div>
   </div>
   <div class="col-sm-2 escalations">
     <p class="value {{ closedIterationData.escalations.class }}">{{ closedIterationData.escalations.value | number:1 }}</p>
     <div class="units">
       <div class="quotient">ESCALATIONS</div>
-      <div class="divisor">SPRINT</div>
+      <div class="divisor">ITERATION</div>
     </div>
   </div>
   <div class="col-sm-2 zeroDefects">
     <p class="value">{{ closedIterationData.zeroDefects.value | number:1 }}</p>
     <div class="units">
       <div class="quotient">ZERO-DEFECTS</div>
-      <div class="divisor">SPRINT</div>
+      <div class="divisor">ITERATION</div>
     </div>
   </div>
   <div class="col-sm-2 nearMisses">
     <p class="value">{{ closedIterationData.nearMisses.value | number:1 }}</p>
     <div class="units">
       <div class="quotient">NEAR-MISSES</div>
-      <div class="divisor">SPRINT</div>
+      <div class="divisor">ITERATION</div>
     </div>
   </div>
 </div>
