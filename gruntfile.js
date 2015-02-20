@@ -43,5 +43,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-protractor-runner');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('compile-less', ['watch:less']);
+    grunt.registerTask('compile-less-dev', ['watch:less']);
+    grunt.registerTask('compile-less', ['less']);
 };
