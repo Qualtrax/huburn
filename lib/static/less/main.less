@@ -286,15 +286,15 @@ h1 {
     opacity: 1;
 }
 
+#loading.overlay {
+    width: 100%;
+}
+
 .loader {
-    margin: Auto 0;
-    height: 100px;
-    width: 20%;
-    text-align: center;
-    padding: 1em;
-    margin: 0 auto 1em;
-    display: inline-block;
-    vertical-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 svg path,
@@ -308,4 +308,106 @@ a:focus {
 
 .navbar {
     z-index: 10000000;
+}
+
+.loading-text {
+    color: #88C53F;
+    font-family: open sans, sans-serif;
+    letter-spacing: 17px;
+    opacity: 0;
+    padding-top: 12px;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    width: 100%;
+    -webkit-animation-name: throb;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-delay: 0.5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-name: throb;
+    animation-duration: 1.5s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    align-self: flex-end;
+    span {
+        display: block;
+        &:last-child {
+            font-size: 100px;
+            letter-spacing: 13.5px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 0px);
+        }
+    }
+}
+
+.circle {
+    flex-direction: column;
+    background-color: #88C53F;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    margin: 0 auto;
+    opacity: 0;
+    -webkit-animation-name: bounce;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-delay: 0.5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-name: bounce;
+    animation-duration: 1.5s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    align-self: flex-end;
+}
+
+.bouncing-ball-wrapper {
+    width: 190px;
+}
+
+@-webkit-keyframes throb {
+    0% {
+        opacity: 0.05;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes throb {
+    0% {
+        opacity: 0.05;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        opacity: 1;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        opacity: 1;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
 }
