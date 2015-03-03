@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+git fetch
+git merge --ff-only origin/master
 grunt compile-less
 docker stop huburn
 docker rm huburn
