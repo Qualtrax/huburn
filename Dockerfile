@@ -13,6 +13,5 @@ RUN apt-get install --only-upgrade -y bash
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 EXPOSE 8080
-EXPOSE 8443
 
 CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/conf.d/supervisord.conf"]

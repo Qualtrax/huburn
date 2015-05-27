@@ -6,4 +6,4 @@ git merge --ff-only origin/master
 grunt compile-less
 docker stop huburn
 docker rm huburn
-docker run -d -p 80:8080 -p 443:8443 -v $PWD:/huburn --name="huburn" huburn-image
+docker run -d -p 8080:8080 -v $PWD:/huburn --name="huburn" huburn-image
