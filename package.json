@@ -8,9 +8,9 @@
   },
   "dependencies": {
     "express": "~4.5.1",
+    "express-session": "~1.6.4",
     "request": "~2.37.0",
-    "URIjs": "~1.13.2",
-    "express-session": "~1.6.4"
+    "urijs": "^1.16.1"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
