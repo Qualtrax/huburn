@@ -11,7 +11,7 @@ describe('huburn', function() {
 
   it('should start at the repositories view', function() {
     browser.get(baseUrl);
-    expect(browser.getCurrentUrl()).toBe(baseUrl + '/#/repositories');
+    expect(browser.getCurrentUrl()).toBe(baseUrl + '/repositories');
   });
 });
 
