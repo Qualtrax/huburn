@@ -4,3 +4,4 @@ config.js
 server.*
 .vagrant
 main.css
+config.js.txt
