@@ -1,3 +1,12 @@
+<div class="row velocity-metrics effort-distribution">
+    <div class="col-sm-2 title">
+         <p>Effort Distribution</p>
+    </div>
+    <div class="donut" ng-repeat="category in closedIterationData.categories">
+        <huburn-donut id="donut{{$index}}" value="category.count"></huburn-donut>
+        <div>{{ category.title }}</div>
+    </div>
+</div>
 <div class="row velocity-metrics">
   <div class="col-sm-2 title">
     <p>Results</p>
@@ -22,11 +31,17 @@
   </div>
   <div class="col-sm-2 zeroDefectBacklog">
     <p class="value">{{ openIterationData.zeroDefectBacklog.value | number:0 }}</p>
-    <p class="units">ZERO-DEFECTS<br />OPEN</p>
+    <div class="units">
+        <div class="quotient">ZERO-DEFECTS</div>
+        <div class="divisor">OPEN</div>
+    </div>
   </div>
   <div class="col-sm-2 nearMissBacklog">
     <p class="value">{{ openIterationData.nearMissBacklog.value | number:0 }}</p>
-    <p class="units">NEAR-MISSES<br />OPEN</p>
+    <div class="units">
+        <div class="quotient">NEAR-MISSES</div>
+        <div class="divisor">OPEN</div>
+    </div>
   </div>
 </div>
 <div class="row velocity-metrics">
