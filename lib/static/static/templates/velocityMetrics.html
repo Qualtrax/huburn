@@ -11,14 +11,17 @@
   <div class="col-sm-2 title">
     <p>Results</p>
   </div>
-  <div class="col-sm-2 met" ng-show="showMet">
-    <p class="value {{ closedIterationData.met.class }}">{{ closedIterationData.met.value }}</p>
-    <p class="units">ITERATIONS <br />MET</p>
+  <div class="col-sm-2 points">
+    <p class="value">{{ closedIterationData.totalPoints.value | number:1 }}</p>
+    <div class="units">
+      <div class="quotient">POINTS</div>
+      <div class="divisor">ITERATION</div>
+    </div>
   </div>
   <div class="col-sm-2 points">
     <p class="value">{{ closedIterationData.points.value | number:1 }}</p>
     <div class="units">
-      <div class="quotient">POINTS</div>
+      <div class="quotient">CAP POINTS</div>
       <div class="divisor">ITERATION</div>
     </div>
   </div>

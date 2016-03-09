@@ -1,7 +1,7 @@
 <div ng-controller="burnupCtrl">
     <huburn-loading open="loading" ng-show="loading"></huburn-loading>
     <huburn-velocity-graph data="milestones" show-met="false"></huburn-velocity-graph>
-    <huburn-velocity-metrics closed-iteration-data="closedIterationData" open-iteration-data="openIterationData" show-met="false" options="options"></huburn-velocity-metrics>
+    <huburn-velocity-metrics closed-iteration-data="closedIterationData" open-iteration-data="openIterationData" options="options"></huburn-velocity-metrics>
     <h2>{{ burnup.title }}</h2>
     <huburn-burnup-graph data="burnup"></huburn-burnup-graph>
 </div>
