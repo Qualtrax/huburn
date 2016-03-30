@@ -1,0 +1,6 @@
+<div class="row velocity-metrics effort-distribution">
+    <div class="donut" ng-repeat="category in closedIterationData.categories">
+        <huburn-donut id="donut{{$index}}" value="category.count"></huburn-donut>
+        <div>{{ category.title }}</div>
+    </div>
+</div>
