@@ -1,6 +1,6 @@
 <div class="row velocity-metrics time-across-board">
-    <div ng-repeat="category in closedIterationData.categories">
-        <div>{{ category.title }}</div>
-        <div>{{ category.duration }} Days</div>
+    <div class="col-md-4" ng-repeat="category in closedIterationData.categories">
+        <div class="tab-category">{{ category.title }}</div>
+        <div class="tab-duration">{{ category.duration }}</div>
     </div>
 </div>
