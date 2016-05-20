@@ -13,6 +13,6 @@ describe("Milestones", function() {
       { labels: [ { name: "points: 5" } ] }
     ];
 
-    expect(getTotalCapitalizablePoints(issues)).toBe(11);
+    expect(getTotalPoints(issues)).toBe(11);
   });
 });
