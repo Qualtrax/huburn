@@ -24,10 +24,13 @@
 			</div>
 		</div>
 		<div ng-repeat="teamMember in teamMembers" class="row">
-			<div class="col-sm-6">
-				<input type="text" ng-model="teamMember.name"/>
+            <div class="col-sm-4">
+                <img class="avatar" alt="{{ teamMember.name }}" src="{{ teamMember.avatar_url }}" height="48" width="48" />
+            </div>
+			<div class="col-sm-4">
+				<span>{{ teamMember.name }}</span>
 			</div>
-			<div class="col-sm-6">
+			<div class="col-sm-4">
 				<input type="number" min="0" max="{{daysInIteration - companyDaysOff}}" ng-model="teamMember.daysOff"/>
 			</div>
 		</div>
