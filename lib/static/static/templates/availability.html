@@ -5,11 +5,13 @@
 				<h3>Days in Iteration</h3>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-sm-6">
-				<input type="number" min="1" ng-model="daysInIteration"/>
-			</div>
-		</div>
+        <div class="row">
+            <div class="iteration-day" ng-repeat="day in possibleDaysInIteration" 
+            ng-class="(daysInIteration == day) ? 'selected' : ''"
+            ng-click="changeDaysInIteration(day);">
+                <span>{{ day }}</span>
+            </div>
+        </div>
 		<div class="row">
 			<div class="col-sm-6">
 				<h3>Days Off</h3n>
@@ -19,7 +21,7 @@
 			<div class="col-sm-2">
 				<img class="avatar" alt="{{ organization.name }}" src="{{ organization.avatar_url }}" height="48" width="48" />
 			</div>
-            <div class="col-sm-4 availability-name">
+            <div class="col-sm-4">
 				<span>{{ organization.name }}</span>
 			</div>
 			<div class="col-sm-2 availability-value">
@@ -30,8 +32,8 @@
             <div class="col-sm-2">
                 <img class="avatar" alt="{{ teamMember.login }}" src="{{ teamMember.avatar_url }}" height="48" width="48" />
             </div>
-			<div class="col-sm-4 availability-name">
-				<span>{{ teamMember.login ? teamMember.login : 'Tim Allen' }}</span>
+			<div class="col-sm-4">
+				<span>{{ teamMember.login }}</span>
 			</div>
 			<div class="col-sm-2 availability-value">
 				<input type="number" min="0" max="{{daysInIteration - companyDaysOff}}" ng-model="teamMember.daysOff"/>

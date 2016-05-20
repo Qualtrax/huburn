@@ -447,20 +447,39 @@ path.color1 {
 }
 
 .availability-option {
-    height: 50px;
+    display: flex;
+    align-content: center;
+    align-items: center;
     margin-bottom: 10px;
-}
-
-.availability-name > span {
-    height: 100%;
-    line-height: 44px;
-}
-
-.availability-value  {
-    height: 100%;
 }
 
 .availability-value > input  {
     padding: 3px 3px 3px 5px;
     margin-top: 10px;
+}
+
+.iteration-day {
+    align-items: center;
+    align-content: center;
+    border: solid 1px #ccc;
+    border-radius: 100%;
+    cursor: pointer;
+    display: flex;
+    float: left;
+    height: 45px;
+    justify-content: center;
+    margin-right: 3px;
+    text-align: center;
+    width: 45px;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+.selected {
+    background-color: #FC930A;
+    font-weight: bold;    
 }
