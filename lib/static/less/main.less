@@ -435,12 +435,32 @@ path.color1 {
     }
 }
 
-.drop-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
-	-webkit-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
-	-moz-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
-	box-shadow:		@x @y @blur @spread rgba(0, 0, 0, @alpha);
+.drop-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25, @color: rgba(0, 0, 0, 0.25)) {
+	-webkit-box-shadow:	@x @y @blur @spread @color;
+	-moz-box-shadow:	@x @y @blur @spread @color;
+	box-shadow:		@x @y @blur @spread @color;
 }
+
 .avatar {
-    .drop-shadow(1px, 1px, 3px, 0px);
+    .drop-shadow(1px, 1px, 3px, 0px, rgba(0, 0, 0, 0.25));
     border-radius: 3px;
+}
+
+.availability-option {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.availability-name > span {
+    height: 100%;
+    line-height: 44px;
+}
+
+.availability-value  {
+    height: 100%;
+}
+
+.availability-value > input  {
+    padding: 3px 3px 3px 5px;
+    margin-top: 10px;
 }

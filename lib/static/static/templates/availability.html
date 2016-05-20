@@ -15,31 +15,26 @@
 				<h3>Days Off</h3n>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-sm-6">
-				<span><b>Company</b></span>
+		<div class="row availability-option">
+			<div class="col-sm-2">
+				<img class="avatar" alt="{{ organization.name }}" src="{{ organization.avatar_url }}" height="48" width="48" />
 			</div>
-			<div class="col-sm-6">
+            <div class="col-sm-4 availability-name">
+				<span>{{ organization.name }}</span>
+			</div>
+			<div class="col-sm-2 availability-value">
 				<input type="number" min="0" max="{{daysInIteration}}" ng-model="companyDaysOff"/>
 			</div>
 		</div>
-		<div ng-repeat="teamMember in teamMembers" class="row">
-            <div class="col-sm-4">
-                <img class="avatar" alt="{{ teamMember.name }}" src="{{ teamMember.avatar_url }}" height="48" width="48" />
+		<div ng-repeat="teamMember in teamMembers | orderBy:teamMember.login" class="row availability-option">
+            <div class="col-sm-2">
+                <img class="avatar" alt="{{ teamMember.login }}" src="{{ teamMember.avatar_url }}" height="48" width="48" />
             </div>
-			<div class="col-sm-4">
-				<span>{{ teamMember.name }}</span>
+			<div class="col-sm-4 availability-name">
+				<span>{{ teamMember.login ? teamMember.login : 'Tim Allen' }}</span>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-2 availability-value">
 				<input type="number" min="0" max="{{daysInIteration - companyDaysOff}}" ng-model="teamMember.daysOff"/>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-6">
-				<form ng-submit="addNewMember()">
-					<input type="text" ng-model="newTeamMember.name"/>
-					<button type="submit">Add</button>
-				</form>
 			</div>
 		</div>
 	</div>
