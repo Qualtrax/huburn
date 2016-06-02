@@ -479,7 +479,59 @@ path.color1 {
     user-select: none;
 }
 
+.iteration-day:hover {
+    background-color: #FC930A;
+    color: white;
+}
+
 .selected {
     background-color: #FC930A;
     font-weight: bold;    
+    color: white;
+}
+
+.availability-button {
+    align-items: center;
+    align-content: center;
+    background-color: #FC930A;
+    border: solid 1px #ccc;
+    color: white;
+    font-size: 17px;
+    justify-content: center;
+    padding: 10px 20px;
+    text-align: center;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+.availability-button:focus {
+    outline: 0;
+}
+
+.availability-button:hover {
+    background-color: darken(#FC930A, 3%);
+}
+
+.availability-suggestions > button {
+    margin-top: 30px;
+}
+
+.availability-suggestions > h1 {
+    font-size: 60px;
+}
+
+span.save-success {
+    font-size: 30px;
+    margin-left: 15px;
+    color: @green;
+}
+
+span.save-failed {
+    font-size: 30px;
+    margin-left: 15px;
+    color: @red;
 }

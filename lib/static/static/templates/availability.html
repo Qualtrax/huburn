@@ -1,20 +1,23 @@
 <div class="row">
-	<div class="col-sm-6">
+	<div class="col-sm-5">
 		<div class="row">
-			<div class="col-sm-6">
+			<div class="col-sm-12">
 				<h3>Days in Iteration</h3>
 			</div>
 		</div>
         <div class="row">
-            <div class="iteration-day" ng-repeat="day in possibleDaysInIteration" 
-            ng-class="(daysInIteration == day) ? 'selected' : ''"
-            ng-click="changeDaysInIteration(day);">
-                <span>{{ day }}</span>
-            </div>
+			<div class="col-sm-12">
+				<div class="iteration-day" ng-repeat="day in possibleDaysInIteration" 
+				ng-class="(daysInIteration == day) ? 'selected' : ''"
+				ng-click="changeDaysInIteration(day);">
+					<span>{{ day }}</span>
+				</div>
+			</div>
+            
         </div>
 		<div class="row">
-			<div class="col-sm-6">
-				<h3>Days Off</h3n>
+			<div class="col-sm-5">
+				<h3>Days Off</h3>
 			</div>
 		</div>
 		<div class="row availability-option">
@@ -40,8 +43,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-sm-6">
-		<h1>Availability (in Days): {{availabilityInDays | number:2}}</h1>
+	<div class="col-sm-7 availability-suggestions">
+		<h1>Availability: {{availabilityInDays | number:2}} days</h1>
 		<h1>Recommended Points: {{recommendedPoints | number:1}}</h1>
+		<button class="availability-button" ng-click="updateMilestoneDescription()">Add Availability to {{ currentMilestoneTitle }}</button>
+		<span ng-show="saveSuccessful" class="save-success glyphicon glyphicon-ok" aria-hidden="true"></span>
+		<span ng-show="saveFailed" class="save-failed glyphicon glyphicon-remove" aria-hidden="true"></span>
 	</div>
 </div>
