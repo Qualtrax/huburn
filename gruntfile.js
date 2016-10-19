@@ -18,6 +18,15 @@ module.exports = function (grunt) {
                 }
             },
         },
+        karma: {
+            options: {
+                configFile: 'karma.conf.js',
+            },
+            debug: {
+                browsers: ['Chrome'],
+                singleRun: false,
+            }
+        },
         less: {
             production: {
                 options: {
@@ -45,4 +54,8 @@ module.exports = function (grunt) {
 
     grunt.registerTask('compile-less-dev', ['watch:less']);
     grunt.registerTask('compile-less', ['less']);
+    grunt.registerTask('unit', [], function () {
+        grunt.loadNpmTasks('grunt-karma');
+        grunt.task.run('karma:debug');
+    });
 };

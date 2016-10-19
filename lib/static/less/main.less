@@ -255,6 +255,100 @@ h1 {
     text-align: center;
 }
 
+.centered-container {
+    margin: 0;
+    padding: 0;
+    color: @gray;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", "Arial Narrow", Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.space-between-container {
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    color: @gray;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", "Arial Narrow", Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.cycle-time-main {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 225px;
+    >.cycle-time-value {
+        font-size: 8em;
+        margin-bottom: -25px;
+    }
+}
+
+.cycle-time-sub {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 225px;
+    >.cycle-time-value {
+        font-size: 6em;
+        letter-spacing: 0;
+        margin-bottom: -15px;
+    }
+}
+
+.cycle-time {
+    background: @gray;
+    width: 225px;
+    height: 225px;
+    @media only screen and (max-width: 768px) {
+        margin-top: 10px;
+    }
+    padding-top: 1%;
+    color: white;
+    text-align: center;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.metric-heading {
+    font-size: 1.6em;
+}
+
+.sub-text {
+    font-size: 1em;
+    margin-top: -15px;
+    text-transform: uppercase;
+}
+
+.metric-sub {
+    background-color: #99CC00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-size: 1.8em;
+    position: absolute;
+    bottom: 0;
+    width: 225px;
+    >.sub-text {
+        margin: 0;
+        font-size: .6em;
+        margin-left: 10px;
+        text-transform: uppercase;
+    }
+}
+
+.metric-sub > .glyphicon {
+    margin-left: .5em;
+    line-height: 0;
+    top: 0;
+}
+
 .link-text {
     font-size: 50px;
     @media only screen and (max-width: 1200px) {
@@ -373,10 +467,6 @@ a:focus {
     width: 190px;
 }
 
-.effort-distribution {
-    margin-bottom: 15px;
-}
-
 .donut {
     display: inline-block;
     height: 99px;
@@ -384,11 +474,11 @@ a:focus {
     margin: 8px;
     text-align: center;
     vertical-align: top;
-    width: 90px;
+    width: 95px;
 }
 
 path.color0 {
-  fill: @green;
+  fill: #99CC00;
 }
 
 path.color1 {

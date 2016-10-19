@@ -1,0 +1,68 @@
+<huburn-loading open="vm.loading" ng-show="vm.loading"></huburn-loading>
+<div class="centered-container ng-cloak">
+    <div class="donut" ng-repeat="category in vm.effortDistribution">
+        <huburn-donut id="donut{{$index}}" value="category.count"></huburn-donut>
+        <div>{{ category.title }}</div>
+    </div>
+</div>
+
+<div class="centered-container ng-cloak" ng-style="{display: vm.display}">
+    <div class="cycle-time-sub">
+      <div class="cycle-time-value">{{ vm.escalationCycleTimes | number:1 }}</div>
+      <div class="sub-text">days</div>
+      <div class="metric-heading">escalations</div>
+    </div>
+    <div class="cycle-time-main">
+      <div class="cycle-time-value">{{ vm.cycleTimes.stories | number:1 }}</div>
+      <div class="sub-text">days</div>
+      <div class="metric-heading">across the board</div>
+    </div>
+    <div class="cycle-time-sub">
+      <div class="cycle-time-value">{{ vm.firelaneCycleTimes | number:1 }}</div>
+      <div class="sub-text">days</div>
+      <div class="metric-heading">firelanes</div>
+    </div>
+</div>
+
+<div class="space-between-container ng-cloak" ng-style="{display: vm.display}">
+  <div class="cycle-time cycle-time-sub">
+    <div class="cycle-time-value">{{ vm.cycleTimes.inProgress.acrossTheBoard | number:1 }}</div>
+    <div class="sub-text">days</div>
+    <div class="metric-heading">IN PROGRESS</div>
+    <div class="metric-sub">
+      <span>{{ vm.cycleTimes.inProgress.waitTime | number:1 }}</span>
+      <span class="sub-text">DAYS WAITING</span> 
+      <span class="sub-text glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+    </div>
+  </div>
+  <div class="cycle-time cycle-time-sub">
+    <div class="cycle-time-value">{{ vm.cycleTimes.review.acrossTheBoard | number:1 }}</div>
+    <div class="sub-text">days</div>
+    <div class="metric-heading">REVIEW</div>
+    <div class="metric-sub">
+      <span>{{ vm.cycleTimes.review.waitTime | number:1 }}</span>
+      <span class="sub-text">DAYS WAITING</span> 
+      <span class="sub-text glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+    </div>
+  </div>
+  <div class="cycle-time cycle-time-sub">
+    <div class="cycle-time-value">{{ vm.cycleTimes.testing.acrossTheBoard | number:1 }}</div>
+    <div class="sub-text">days</div>
+    <div class="metric-heading">TESTING</div>
+    <div class="metric-sub">
+      <span>{{ vm.cycleTimes.testing.waitTime | number:1 }}</span> 
+      <span class="sub-text">DAYS WAITING</span>
+      <span class="sub-text glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+    </div>
+  </div>
+  <div class="cycle-time cycle-time-sub">
+    <div class="cycle-time-value">{{ vm.cycleTimes.merge.acrossTheBoard | number:1 }}</div>
+    <div class="sub-text">days</div>
+    <div class="metric-heading">MERGE</div>
+    <div class="metric-sub">
+      <span>{{ vm.cycleTimes.merge.waitTime | number:1 }}</span>
+      <span class="sub-text">DAYS WAITING</span> 
+      <span class="sub-text glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+    </div>
+  </div>
+</div>

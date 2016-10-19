@@ -15,14 +15,20 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'lib/public/public/**/*.js',
+      'lib/static/static/js/vendor/jquery-1.11.0.min.js',
+      'lib/static/static/js/vendor/angular.min.js',
+      'lib/static/static/js/vendor/angular-mocks.js',
+      'lib/static/static/js/vendor/angular-route.min.js',
+      'lib/static/static/js/app.js',
+      'lib/static/static/js/**/*.js',
       'tests/**/*.js'
     ],
 
 
     // list of files to exclude
     exclude: [
-      'lib/public/public/js/vendor/*'
+      'lib/public/public/js/vendor/*',
+      'tests/integration/*'
     ],
 
 

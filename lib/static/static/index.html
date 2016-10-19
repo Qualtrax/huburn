@@ -30,11 +30,13 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/repositories">Repositories</a>
                     </li>
+                    <li ng-show="repo.length > 0"><a href="/burndown/{{repo}}">Burndown</a>
+                    </li>
                     <li ng-show="repo.length > 0"><a href="/burnup/{{repo}}">Burnup</a>
                     </li>
-                    <li ng-show="repo.length > 0"><a href="/availability/{{repo}}">Availability Calculator</a>
+                    <li ng-show="repo.length > 0"><a href="/metrics/{{repo}}">Metrics</a>
                     </li>
-                    <li ng-show="repo.length > 0"><a href="/burndown/{{repo}}">Burndown</a>
+                    <li ng-show="repo.length > 0"><a href="/availability/{{repo}}">Availability Calculator</a>
                     </li>
                     <li><a href="https://github.com/Qualtrax/huburn">Huburn on GitHub</a>
                     </li>
@@ -57,8 +59,13 @@
     <script src="js/burnupCalculator.js"></script>
     <script src="js/velocityMetrics.js"></script>
     <script src='js/services/gitHubService.js'></script>
+    <script src="js/services/cycleTimeService.js"></script>
+    <script src="js/services/metricService.js"></script>
+    <script src="js/services/issueService.js"></script>
+    <script src="js/services/dateService.js"></script>
     <script src="js/controllers/burndownCtrl.js"></script>
     <script src="js/controllers/burnupCtrl.js"></script>
+    <script src="js/controllers/metricsCtrl.js"></script>
     <script src="js/controllers/repositoriesCtrl.js"></script>
     <script src="js/controllers/availabilityCtrl.js"></script>
     <script src="js/directives/huburnLoading.js"></script>
