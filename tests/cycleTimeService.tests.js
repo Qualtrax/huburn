@@ -3,6 +3,7 @@
 
     describe('Cycle Time Service', function () {
         var cycleTimeService;
+        var testIssuesService = new TestIssuesService();
 
         beforeEach(module('huburn'));
 
@@ -1078,6 +1079,106 @@
             expect(cycleTimes.review.waitTime).toBe(24);
             expect(cycleTimes.testing.waitTime).toBe(2);
             expect(cycleTimes.merge.waitTime).toBe(0.3);
+        });
+
+        if ('should return no summary results when there are no issues', function() {
+            var summary = cycleTimeService.getStandardDeviationSummary([], []);
+            expect(summary.statistics.length).toBe(0);
+        });
+
+        it ('should return statistic for issue with point label', function () {
+            var historicalIssueOne = testIssuesService.buildAcrossTheBoardIssue(4, 2);
+            var historicalIssueTwo = testIssuesService.buildAcrossTheBoardIssue(5, 2);
+            var currentIssueOne = testIssuesService.buildAcrossTheBoardIssue(4, 2);
+            var summary = cycleTimeService.getStandardDeviationSummary([ currentIssueOne ], [ historicalIssueOne, historicalIssueTwo ]);
+            var expectedStandardDeviation = 0.5;
+            var expectedMean = 4.5;
+            expect(summary.statistics.length).toBe(1);
+            expect(summary.statistics[0].pointsLabel).toBe(2);
+            expect(summary.statistics[0].mean).toBe(expectedMean);
+            expect(summary.statistics[0].standardDeviation).toBe(expectedStandardDeviation);
+            expect(summary.statistics[0].minValue).toBe(expectedMean - (3 * expectedStandardDeviation));
+            expect(summary.statistics[0].maxValue).toBe(expectedMean + (3 * expectedStandardDeviation));
+            expect(summary.statistics[0].dataPoints[0].time).toBe(4);
+            expect(summary.collectiveMinValue).toBe(expectedMean - (3 * expectedStandardDeviation));
+            expect(summary.collectiveMaxValue).toBe(expectedMean + (3 * expectedStandardDeviation));
+        });
+
+        it ('should return statistics for multiple point labels', function () {
+            var historicalIssues = [
+                testIssuesService.buildAcrossTheBoardIssue(4, 2),
+                testIssuesService.buildAcrossTheBoardIssue(5, 2),
+                testIssuesService.buildAcrossTheBoardIssue(6, 3),
+                testIssuesService.buildAcrossTheBoardIssue(10, 3),
+                testIssuesService.buildAcrossTheBoardIssue(9.5, 3),
+            ];
+
+            var currentIssues = [
+                testIssuesService.buildAcrossTheBoardIssue(4, 2),
+                testIssuesService.buildAcrossTheBoardIssue(7, 3)
+            ];
+            
+            var summary = cycleTimeService.getStandardDeviationSummary(currentIssues, historicalIssues);
+            var expectedStandardDeviations = [0.5, jStat.stdev([ 6, 10, 9.5])];
+            var expectedMeans = [4.5, 8.5];
+            expect(summary.statistics.length).toBe(2);
+            expect(summary.statistics[0].pointsLabel).toBe(2);
+            expect(summary.statistics[0].mean).toBe(expectedMeans[0]);
+            expect(summary.statistics[0].standardDeviation).toBe(expectedStandardDeviations[0]);
+            expect(summary.statistics[0].minValue).toBe(expectedMeans[0] - (3 * expectedStandardDeviations[0]));
+            expect(summary.statistics[0].maxValue).toBe(expectedMeans[0] + (3 * expectedStandardDeviations[0]));
+            expect(summary.statistics[0].dataPoints[0].time).toBe(4);            
+
+            expect(summary.statistics[1].pointsLabel).toBe(3);
+            expect(summary.statistics[1].mean).toBe(expectedMeans[1]);
+            expect(summary.statistics[1].standardDeviation).toBe(expectedStandardDeviations[1]);
+            expect(summary.statistics[1].minValue).toBe(expectedMeans[1] - (3 * expectedStandardDeviations[1]));
+            expect(summary.statistics[1].maxValue).toBe(expectedMeans[1] + (3 * expectedStandardDeviations[1]));
+            expect(summary.statistics[1].dataPoints[0].time).toBe(7);
+
+            expect(summary.collectiveMinValue).toBe(expectedMeans[0] - (3 * expectedStandardDeviations[0]));
+            expect(summary.collectiveMaxValue).toBe(expectedMeans[1] + (3 * expectedStandardDeviations[1]));
+        });
+
+        it ('should return statistics when issue is currently in progress', function () {
+            var historicalIssues = [
+                testIssuesService.buildAcrossTheBoardIssue(20, 13),
+                testIssuesService.buildAcrossTheBoardIssue(18, 13),
+                testIssuesService.buildAcrossTheBoardIssue(13, 13),
+            ];
+
+            var currentIssues = [
+                testIssuesService.buildInProgressIssue(16, 13)
+            ];
+            
+            var summary = cycleTimeService.getStandardDeviationSummary(currentIssues, historicalIssues);
+            var expectedStandardDeviation = jStat.stdev([ 20, 18, 13 ]);
+            var expectedMean = 17;
+            expect(summary.statistics.length).toBe(1);
+            expect(summary.statistics[0].pointsLabel).toBe(13);
+            expect(summary.statistics[0].mean).toBe(expectedMean);
+            expect(summary.statistics[0].standardDeviation).toBe(expectedStandardDeviation);
+            expect(summary.statistics[0].minValue).toBe(expectedMean - (3 * expectedStandardDeviation));
+            expect(summary.statistics[0].maxValue).toBe(expectedMean + (3 * expectedStandardDeviation));
+            expect(summary.statistics[0].dataPoints[0].time).toBe(16);
+
+            expect(summary.collectiveMinValue).toBe(expectedMean - (3 * expectedStandardDeviation));
+            expect(summary.collectiveMaxValue).toBe(expectedMean + (3 * expectedStandardDeviation));
+        });
+
+        it ('should not return statistics when point label has fewer than 2 data points', function () {
+            var historicalIssues = [
+                testIssuesService.buildAcrossTheBoardIssue(20, 13)
+            ];
+
+            var currentIssues = [
+                testIssuesService.buildInProgressIssue(16, 13)
+            ];
+            
+            var summary = cycleTimeService.getStandardDeviationSummary(currentIssues, historicalIssues);
+            expect(summary.statistics.length).toBe(0);
+            expect(summary.collectiveMinValue).toBe(0);
+            expect(summary.collectiveMaxValue).toBe(0);
         });
     });
 })();
