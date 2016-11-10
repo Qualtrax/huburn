@@ -9,6 +9,7 @@
   "dependencies": {
     "express": "~4.5.1",
     "express-session": "~1.6.4",
+    "jStat": "^1.5.3",
     "memory-cache": "^0.1.6",
     "request": "~2.37.0",
     "urijs": "^1.16.1"

@@ -19,8 +19,10 @@ module.exports = function(config) {
       'lib/static/static/js/vendor/angular.min.js',
       'lib/static/static/js/vendor/angular-mocks.js',
       'lib/static/static/js/vendor/angular-route.min.js',
+      'lib/static/static/js/vendor/jstat.min.js',
       'lib/static/static/js/app.js',
       'lib/static/static/js/**/*.js',
+      'tests/**/testIssuesService.js',
       'tests/**/*.js'
     ],
 
