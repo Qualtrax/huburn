@@ -11,95 +11,99 @@
   </li>
 </ul>
 
-<div class="centered-container ng-cloak" ng-style="{display: vm.displayCycleTimes}">
-    <div class="cycle-time-sub">
-      <div class="cycle-time-value">{{ vm.escalationCycleTimes | number:1 }}</div>
+<div class="metric-content metric-content-left ng-cloak" ng-class="{'selected-metric-content': vm.selectedHeader === 'cycle-times'}">
+  <div class="centered-container ng-cloak" ng-style="{display: vm.display}">
+      <div class="cycle-time-sub">
+        <div class="cycle-time-value">{{ vm.escalationCycleTimes | number:1 }}</div>
+        <div class="sub-text">days</div>
+        <div class="metric-heading">escalations</div>
+      </div>
+      <div class="cycle-time-main">
+        <div class="cycle-time-value">{{ vm.cycleTimes.stories | number:1 }}</div>
+        <div class="sub-text">days</div>
+        <div class="metric-heading">across the board</div>
+      </div>
+      <div class="cycle-time-sub">
+        <div class="cycle-time-value">{{ vm.firelaneCycleTimes | number:1 }}</div>
+        <div class="sub-text">days</div>
+        <div class="metric-heading">firelanes</div>
+      </div>
+  </div>
+
+  <div class="space-between-container ng-cloak" ng-style="{display: vm.display}">
+    <div class="cycle-time cycle-time-sub">
+      <div class="cycle-time-value">{{ vm.cycleTimes.inProgress.acrossTheBoard | number:1 }}</div>
       <div class="sub-text">days</div>
-      <div class="metric-heading">escalations</div>
+      <div class="metric-heading">IN PROGRESS</div>
+      <div class="metric-sub">
+        <span>{{ vm.cycleTimes.inProgress.waitTime | number:1 }}</span>
+        <span class="sub-text">HOURS WAITING</span> 
+        <span class="sub-text glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+      </div>
     </div>
-    <div class="cycle-time-main">
-      <div class="cycle-time-value">{{ vm.cycleTimes.stories | number:1 }}</div>
+    <div class="cycle-time cycle-time-sub">
+      <div class="cycle-time-value">{{ vm.cycleTimes.review.acrossTheBoard | number:1 }}</div>
       <div class="sub-text">days</div>
-      <div class="metric-heading">across the board</div>
+      <div class="metric-heading">REVIEW</div>
+      <div class="metric-sub">
+        <span>{{ vm.cycleTimes.review.waitTime | number:1 }}</span>
+        <span class="sub-text">HOURS WAITING</span> 
+        <span class="sub-text glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+      </div>
     </div>
-    <div class="cycle-time-sub">
-      <div class="cycle-time-value">{{ vm.firelaneCycleTimes | number:1 }}</div>
+    <div class="cycle-time cycle-time-sub">
+      <div class="cycle-time-value">{{ vm.cycleTimes.testing.acrossTheBoard | number:1 }}</div>
       <div class="sub-text">days</div>
-      <div class="metric-heading">firelanes</div>
+      <div class="metric-heading">TESTING</div>
+      <div class="metric-sub">
+        <span>{{ vm.cycleTimes.testing.waitTime | number:1 }}</span> 
+        <span class="sub-text">HOURS WAITING</span>
+        <span class="sub-text glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+      </div>
     </div>
+    <div class="cycle-time cycle-time-sub">
+      <div class="cycle-time-value">{{ vm.cycleTimes.merge.acrossTheBoard | number:1 }}</div>
+      <div class="sub-text">days</div>
+      <div class="metric-heading">MERGE</div>
+      <div class="metric-sub">
+        <span>{{ vm.cycleTimes.merge.waitTime | number:1 }}</span>
+        <span class="sub-text">HOURS WAITING</span> 
+        <span class="sub-text glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="space-between-container ng-cloak" ng-style="{display: vm.displayCycleTimes}">
-  <div class="cycle-time cycle-time-sub">
-    <div class="cycle-time-value">{{ vm.cycleTimes.inProgress.acrossTheBoard | number:1 }}</div>
-    <div class="sub-text">days</div>
-    <div class="metric-heading">IN PROGRESS</div>
-    <div class="metric-sub">
-      <span>{{ vm.cycleTimes.inProgress.waitTime | number:1 }}</span>
-      <span class="sub-text">HOURS WAITING</span> 
-      <span class="sub-text glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-    </div>
+<div class="metric-content metric-content-right metric-content-distributions" ng-class="{'selected-metric-content': vm.selectedHeader === 'distributions'}">
+  <div class="centered-container ng-cloak" ng-style="{display: vm.display}">
+      <div class="donut" ng-repeat="category in vm.effortDistribution">
+          <huburn-donut id="donut{{$index}}" value="category.count"></huburn-donut>
+          <div>{{ category.title }}</div>
+      </div>
   </div>
-  <div class="cycle-time cycle-time-sub">
-    <div class="cycle-time-value">{{ vm.cycleTimes.review.acrossTheBoard | number:1 }}</div>
-    <div class="sub-text">days</div>
-    <div class="metric-heading">REVIEW</div>
-    <div class="metric-sub">
-      <span>{{ vm.cycleTimes.review.waitTime | number:1 }}</span>
-      <span class="sub-text">HOURS WAITING</span> 
-      <span class="sub-text glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-    </div>
-  </div>
-  <div class="cycle-time cycle-time-sub">
-    <div class="cycle-time-value">{{ vm.cycleTimes.testing.acrossTheBoard | number:1 }}</div>
-    <div class="sub-text">days</div>
-    <div class="metric-heading">TESTING</div>
-    <div class="metric-sub">
-      <span>{{ vm.cycleTimes.testing.waitTime | number:1 }}</span> 
-      <span class="sub-text">HOURS WAITING</span>
-      <span class="sub-text glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-    </div>
-  </div>
-  <div class="cycle-time cycle-time-sub">
-    <div class="cycle-time-value">{{ vm.cycleTimes.merge.acrossTheBoard | number:1 }}</div>
-    <div class="sub-text">days</div>
-    <div class="metric-heading">MERGE</div>
-    <div class="metric-sub">
-      <span>{{ vm.cycleTimes.merge.waitTime | number:1 }}</span>
-      <span class="sub-text">HOURS WAITING</span> 
-      <span class="sub-text glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-    </div>
-  </div>
-</div>
 
-<div class="centered-container ng-cloak" ng-style="{display: vm.displayDistributions}">
-    <div class="donut" ng-repeat="category in vm.effortDistribution">
-        <huburn-donut id="donut{{$index}}" value="category.count"></huburn-donut>
-        <div>{{ category.title }}</div>
+  <div class="space-between-container ng-cloak" ng-style="{display: vm.display}">
+    <div class="statistics-summaries" ng-repeat="statistic in vm.standardDeviationSummary.statistics">
+        <div class="statistic-summary">       
+          <div class="statistic-points-label">{{ statistic.pointsLabel }}</div>
+          <div class="statistic-wrapper">
+            <span ng-repeat="dataPoint in statistic.dataPoints">
+              <a href="https://github.com/{{ vm.repo }}/issues/{{ dataPoint.issue.number }}" class="issue-link" target="_blank">
+                <span class="statistic-issue" style="left: {{ (dataPoint.time / vm.standardDeviationSummary.collectiveMaxValue) * 100}}%">
+                  <span class="statistic-issue-number">{{ dataPoint.issue.number }}</span>
+                </span>
+              </a>
+            </span>
+            <div class="statistic-region statistic-region-bad" style="width: {{ vm.calculateLeftRedPercentage(statistic) }}%"></div>
+            <div class="statistic-region statistic-region-ok" style="width: {{ vm.calculateLeftYellowPercentage(statistic) }}%"></div>
+            <div class="statistic-region statistic-region-good" style="width: {{ vm.calculateGreenPercentage(statistic) }}%"></div>
+            <div class="statistic-region statistic-region-ok" style="width: {{ vm.calculateRightYellowPercentage(statistic) }}%"></div>
+            <div class="statistic-region statistic-region-bad" style="width: {{ vm.calculateRightRedPercentage(statistic)  }}%"></div>
+          </div>
+        </div> 
+        <div class="statistic-textual-summary">
+            {{ statistic.numberOfHistoricalItems }} historical issues, on average, spending {{ statistic.meanInDays.toFixed(1) }} days in progress.
+        </div>     
     </div>
-</div>
-
-<div class="space-between-container ng-cloak" ng-style="{display: vm.displayDistributions}">
-  <div class="statistics-summaries" ng-repeat="statistic in vm.standardDeviationSummary.statistics">
-      <div class="statistic-summary">       
-        <div class="statistic-points-label">{{ statistic.pointsLabel }}</div>
-        <div class="statistic-wrapper">
-          <span ng-repeat="dataPoint in statistic.dataPoints">
-            <a href="https://github.com/{{ vm.repo }}/issues/{{ dataPoint.issue.number }}" class="issue-link" target="_blank">
-              <span class="statistic-issue" style="left: {{ (dataPoint.time / vm.standardDeviationSummary.collectiveMaxValue) * 100}}%">
-                <span class="statistic-issue-number">{{ dataPoint.issue.number }}</span>
-              </span>
-            </a>
-          </span>
-          <div class="statistic-region statistic-region-bad" style="width: {{ vm.calculateLeftRedPercentage(statistic) }}%"></div>
-          <div class="statistic-region statistic-region-ok" style="width: {{ vm.calculateLeftYellowPercentage(statistic) }}%"></div>
-          <div class="statistic-region statistic-region-good" style="width: {{ vm.calculateGreenPercentage(statistic) }}%"></div>
-          <div class="statistic-region statistic-region-ok" style="width: {{ vm.calculateRightYellowPercentage(statistic) }}%"></div>
-          <div class="statistic-region statistic-region-bad" style="width: {{ vm.calculateRightRedPercentage(statistic)  }}%"></div>
-        </div>
-      </div> 
-      <div class="statistic-textual-summary">
-          {{ statistic.numberOfHistoricalItems }} historical issues, on average, spending {{ statistic.meanInDays.toFixed(1) }} days in progress.
-      </div>     
   </div>
 </div>
