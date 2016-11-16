@@ -1097,10 +1097,7 @@
             expect(summary.statistics[0].pointsLabel).toBe(2);
             expect(summary.statistics[0].mean).toBe(expectedMean);
             expect(summary.statistics[0].standardDeviation).toBe(expectedStandardDeviation);
-            expect(summary.statistics[0].minValue).toBe(expectedMean - (3 * expectedStandardDeviation));
-            expect(summary.statistics[0].maxValue).toBe(expectedMean + (3 * expectedStandardDeviation));
             expect(summary.statistics[0].dataPoints[0].time).toBe(4);
-            expect(summary.collectiveMinValue).toBe(expectedMean - (3 * expectedStandardDeviation));
             expect(summary.collectiveMaxValue).toBe(expectedMean + (3 * expectedStandardDeviation));
         });
 
@@ -1125,18 +1122,13 @@
             expect(summary.statistics[0].pointsLabel).toBe(2);
             expect(summary.statistics[0].mean).toBe(expectedMeans[0]);
             expect(summary.statistics[0].standardDeviation).toBe(expectedStandardDeviations[0]);
-            expect(summary.statistics[0].minValue).toBe(expectedMeans[0] - (3 * expectedStandardDeviations[0]));
-            expect(summary.statistics[0].maxValue).toBe(expectedMeans[0] + (3 * expectedStandardDeviations[0]));
             expect(summary.statistics[0].dataPoints[0].time).toBe(4);            
 
             expect(summary.statistics[1].pointsLabel).toBe(3);
             expect(summary.statistics[1].mean).toBe(expectedMeans[1]);
             expect(summary.statistics[1].standardDeviation).toBe(expectedStandardDeviations[1]);
-            expect(summary.statistics[1].minValue).toBe(expectedMeans[1] - (3 * expectedStandardDeviations[1]));
-            expect(summary.statistics[1].maxValue).toBe(expectedMeans[1] + (3 * expectedStandardDeviations[1]));
             expect(summary.statistics[1].dataPoints[0].time).toBe(7);
 
-            expect(summary.collectiveMinValue).toBe(expectedMeans[0] - (3 * expectedStandardDeviations[0]));
             expect(summary.collectiveMaxValue).toBe(expectedMeans[1] + (3 * expectedStandardDeviations[1]));
         });
 
@@ -1158,11 +1150,7 @@
             expect(summary.statistics[0].pointsLabel).toBe(13);
             expect(summary.statistics[0].mean).toBe(expectedMean);
             expect(summary.statistics[0].standardDeviation).toBe(expectedStandardDeviation);
-            expect(summary.statistics[0].minValue).toBe(expectedMean - (3 * expectedStandardDeviation));
-            expect(summary.statistics[0].maxValue).toBe(expectedMean + (3 * expectedStandardDeviation));
             expect(summary.statistics[0].dataPoints[0].time).toBe(16);
-
-            expect(summary.collectiveMinValue).toBe(expectedMean - (3 * expectedStandardDeviation));
             expect(summary.collectiveMaxValue).toBe(expectedMean + (3 * expectedStandardDeviation));
         });
 
@@ -1177,7 +1165,6 @@
             
             var summary = cycleTimeService.getStandardDeviationSummary(currentIssues, historicalIssues);
             expect(summary.statistics.length).toBe(0);
-            expect(summary.collectiveMinValue).toBe(0);
             expect(summary.collectiveMaxValue).toBe(0);
         });
     });
