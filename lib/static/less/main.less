@@ -273,6 +273,7 @@ h1 > a.selected-header:before {
 
 .body-content {
     padding-top: 70px;
+    position: relative;
 }
 
 .flex-container {
@@ -345,6 +346,40 @@ h1 > a.selected-header:before {
     padding-left: 25px;
 }
 
+.metric-content {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.metric-content.selected-metric-content {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.metric-content-left { 
+    opacity: 0.1;
+    -webkit-transform: translateX(-95%);
+    transform: translateX(-95%);
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.metric-content-right { 
+    opacity: 0.1;
+    -webkit-transform: translateX(95%);
+    transform: translateX(95%);
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.metric-content-distributions {
+    padding-top: 40px;
+}
+
 .cycle-time-main {
     text-align: center;
     margin-bottom: 30px;
@@ -378,6 +413,14 @@ h1 > a.selected-header:before {
     text-align: center;
     letter-spacing: 1px;
     position: relative;
+}
+
+.cycle-time:first-child {
+    margin-left: -10px;
+}
+
+.cycle-time:not(:first-child) {
+    margin-left: 20px;
 }
 
 .metric-heading {
