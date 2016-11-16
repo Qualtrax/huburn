@@ -92,9 +92,9 @@
             </a>
           </span>
           <div class="statistic-region statistic-region-bad" style="width: {{ vm.calculateLeftRedPercentage(statistic, vm.standardDeviationSummary) }}%"></div>
-          <div class="statistic-region statistic-region-ok" style="width: {{ vm.calculateYellowPercentage(statistic, vm.standardDeviationSummary) }}%"></div>
+          <div class="statistic-region statistic-region-ok" style="width: {{ vm.calculateLeftYellowPercentage(statistic, vm.standardDeviationSummary) }}%"></div>
           <div class="statistic-region statistic-region-good" style="width: {{ vm.calculateGreenPercentage(statistic, vm.standardDeviationSummary) }}%"></div>
-          <div class="statistic-region statistic-region-ok" style="width: {{ vm.calculateYellowPercentage(statistic, vm.standardDeviationSummary) }}%"></div>
+          <div class="statistic-region statistic-region-ok" style="width: {{ vm.calculateRightYellowPercentage(statistic, vm.standardDeviationSummary) }}%"></div>
           <div class="statistic-region statistic-region-bad" style="width: {{ vm.calculateRightRedPercentage(statistic, vm.standardDeviationSummary)  }}%"></div>
         </div>
       </div> 
