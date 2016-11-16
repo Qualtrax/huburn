@@ -86,20 +86,20 @@
         <div class="statistic-wrapper">
           <span ng-repeat="dataPoint in statistic.dataPoints">
             <a href="https://github.com/{{ vm.repo }}/issues/{{ dataPoint.issue.number }}" class="issue-link" target="_blank">
-              <span class="statistic-issue" style="left: {{ ((dataPoint.time - vm.standardDeviationSummary.collectiveMinValue) / vm.standardDeviationSummary.collectiveRange) * 100}}%">
+              <span class="statistic-issue" style="left: {{ (dataPoint.time / vm.standardDeviationSummary.collectiveMaxValue) * 100}}%">
                 <span class="statistic-issue-number">{{ dataPoint.issue.number }}</span>
               </span>
             </a>
           </span>
-          <div class="statistic-region statistic-region-bad" style="width: {{ vm.calculateLeftRedPercentage(statistic, vm.standardDeviationSummary) }}%"></div>
-          <div class="statistic-region statistic-region-ok" style="width: {{ vm.calculateLeftYellowPercentage(statistic, vm.standardDeviationSummary) }}%"></div>
-          <div class="statistic-region statistic-region-good" style="width: {{ vm.calculateGreenPercentage(statistic, vm.standardDeviationSummary) }}%"></div>
-          <div class="statistic-region statistic-region-ok" style="width: {{ vm.calculateRightYellowPercentage(statistic, vm.standardDeviationSummary) }}%"></div>
-          <div class="statistic-region statistic-region-bad" style="width: {{ vm.calculateRightRedPercentage(statistic, vm.standardDeviationSummary)  }}%"></div>
+          <div class="statistic-region statistic-region-bad" style="width: {{ vm.calculateLeftRedPercentage(statistic) }}%"></div>
+          <div class="statistic-region statistic-region-ok" style="width: {{ vm.calculateLeftYellowPercentage(statistic) }}%"></div>
+          <div class="statistic-region statistic-region-good" style="width: {{ vm.calculateGreenPercentage(statistic) }}%"></div>
+          <div class="statistic-region statistic-region-ok" style="width: {{ vm.calculateRightYellowPercentage(statistic) }}%"></div>
+          <div class="statistic-region statistic-region-bad" style="width: {{ vm.calculateRightRedPercentage(statistic)  }}%"></div>
         </div>
       </div> 
       <div class="statistic-textual-summary">
-          {{ statistic.numberOfHistoricalItems }} historical issues, on average, spending {{ statistic.mean.toFixed(1) }} days in progress.
+          {{ statistic.numberOfHistoricalItems }} historical issues, on average, spending {{ statistic.meanInDays.toFixed(1) }} days in progress.
       </div>     
   </div>
 </div>
