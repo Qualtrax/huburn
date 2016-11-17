@@ -103,6 +103,8 @@
         </div> 
         <div class="statistic-textual-summary">
             {{ statistic.numberOfHistoricalItems }} historical issues, on average, spending {{ statistic.mean.toFixed(1) }} days in progress.
+            Longest: <a href="https://github.com/{{ vm.repo }}/issues/{{ statistic.longestDataPoint.issue.number }}" target="_blank">{{ statistic.longestDataPoint.issue.number }}</a> - taking {{ statistic.longestDataPoint.time }} days,
+            Shortest: <a href="https://github.com/{{ vm.repo }}/issues/{{ statistic.shortestDataPoint.issue.number }}" target="_blank">{{ statistic.shortestDataPoint.issue.number }}</a>  - taking {{ statistic.shortestDataPoint.time }} days
         </div>     
     </div>
   </div>
