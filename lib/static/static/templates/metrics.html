@@ -89,7 +89,7 @@
           <div class="statistic-wrapper">
             <span ng-repeat="dataPoint in statistic.dataPoints">
               <a href="https://github.com/{{ vm.repo }}/issues/{{ dataPoint.issue.number }}" class="issue-link" target="_blank">
-                <span class="statistic-issue" style="left: {{ (dataPoint.time / vm.standardDeviationSummary.collectiveMaxValue) * 100}}%">
+                <span class="statistic-issue" ng-class="vm.getDataPointClass(dataPoint, statistic)" style="left: {{ (dataPoint.time / vm.standardDeviationSummary.collectiveMaxValue) * 100}}%">
                   <span class="statistic-issue-number">{{ dataPoint.issue.number }}</span>
                 </span>
               </a>

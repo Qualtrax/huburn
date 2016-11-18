@@ -504,11 +504,33 @@ h1 > a.selected-header:before {
 }
 
 .statistic-issue {
-    background-color: white;
+    border-left: solid 1px white;
+    border-right: solid 1px white;
     height: 40px;
+    opacity: 0.8;
     position: absolute;
     top: 0;
-    width: 3px;
+    width: 6px;
+}
+
+.statistic-issue-completed { 
+    background-color: @gray;
+}
+
+.statistic-issue-bad { 
+    background-color: @red;
+}
+
+.statistic-issue-ok { 
+    background-color: @yellow;
+}
+
+.statistic-issue-good { 
+    background-color: @green;
+}
+
+.statistic-issue:hover {
+    opacity: 1;
 }
 
 .statistic-issue:hover .statistic-issue-number {
@@ -518,6 +540,7 @@ h1 > a.selected-header:before {
 .statistic-issue-number {
     display: none;
     left: -12px;
+    opacity: 1;
     position: absolute;
     top: -20px;
 }
