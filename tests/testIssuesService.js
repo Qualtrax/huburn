@@ -11,7 +11,7 @@ function TestIssuesService()
             "closed_at":"2016-05-31T14:47:25Z",
             "labels":[  
                 {  
-                    "name":"6 - Done"
+                    "name":"8 - Done"
                 },
                 {  
                     "name":"feature"
@@ -39,28 +39,28 @@ function TestIssuesService()
                     "event":"labeled",
                     "created_at":"2016-05-22T15:04:43Z",
                     "label":{  
-                        "name":"1 - Ready"
+                        "name":"3 - Ready"
                     }
                 },
                 {  
                     "event":"unlabeled",
                     "created_at":"2016-05-22T15:05:43Z",
                     "label":{  
-                        "name":"1 - Ready"
+                        "name":"3 - Ready"
                     }
                 },
                 {  
                     "event":"labeled",
                     "created_at":labeledInProgressAt.toString(),
                     "label":{  
-                        "name":"2 - In Progress"
+                        "name":"4 - In Progress"
                     }
                 },
                 {  
                     "event":"unlabeled",
                     "created_at":unlabeledInProgressAt.toString(),
                     "label":{  
-                        "name":"2 - In Progress"
+                        "name":"4 - In Progress"
                     }
                 },
                 {  
@@ -81,35 +81,35 @@ function TestIssuesService()
                     "event":"labeled",
                     "created_at":"2016-05-28T15:08:43Z",
                     "label":{  
-                        "name":"4 - Testing"
+                        "name":"6 - Testing"
                     }
                 },
                 {  
                     "event":"unlabeled",
                     "created_at":"2016-05-30T15:04:43Z",
                     "label":{  
-                        "name":"4 - Testing"
+                        "name":"6 - Testing"
                     }
                 },
                 {  
                     "event":"labeled",
                     "created_at":"2016-05-30T15:05:43Z",
                     "label":{  
-                        "name":"5 - Merge"
+                        "name":"7 - Merge"
                     }
                 },
                 {  
                     "event":"unlabeled",
                     "created_at":"2016-05-31T15:04:43Z",
                     "label":{  
-                        "name":"5 - Merge"
+                        "name":"7 - Merge"
                     }
                 },
                 {  
                     "event":"labeled",
                     "created_at":"2016-05-31T15:04:43Z",
                     "label":{  
-                        "name":"6 - Done"
+                        "name":"8 - Done"
                     }
                 },
                 {  
@@ -130,7 +130,7 @@ function TestIssuesService()
             "closed_at":"2016-05-31T14:47:25Z",
             "labels":[  
                 {  
-                    "name":"2 - In Progress"
+                    "name":"4 - In Progress"
                 },
                 {  
                     "name":"feature"
@@ -158,21 +158,21 @@ function TestIssuesService()
                     "event":"labeled",
                     "created_at":"2016-05-22T15:04:43Z",
                     "label":{  
-                        "name":"1 - Ready"
+                        "name":"3 - Ready"
                     }
                 },
                 {  
                     "event":"unlabeled",
                     "created_at":"2016-05-22T15:05:43Z",
                     "label":{  
-                        "name":"1 - Ready"
+                        "name":"3 - Ready"
                     }
                 },
                 {  
                     "event":"labeled",
                     "created_at":labeledInProgressAt.toString(),
                     "label":{  
-                        "name":"2 - In Progress"
+                        "name":"4 - In Progress"
                     }
                 }
             ]
