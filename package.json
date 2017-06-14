@@ -12,11 +12,13 @@
     "jStat": "^1.5.3",
     "memory-cache": "^0.1.6",
     "request": "~2.37.0",
-    "urijs": "^1.16.1"
-  },
-  "devDependencies": {
+    "urijs": "^1.16.1",
     "grunt": "^0.4.5",
     "grunt-contrib-less": "~0.8.2",
+    "less": "~1.7.3",
+    "shelljs": "^0.3.0"
+  },
+  "devDependencies": {
     "grunt-contrib-watch": "^0.6.1",
     "grunt-karma": "~0.8.3",
     "grunt-protractor-runner": "^1.1.0",
@@ -24,9 +26,7 @@
     "jasmine-node": "~1.14.3",
     "karma": "~0.12.16",
     "karma-chrome-launcher": "~0.1.4",
-    "karma-jasmine": "~0.1.5",
-    "less": "~1.7.3",
-    "shelljs": "^0.3.0"
+    "karma-jasmine": "~0.1.5"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

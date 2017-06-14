@@ -4,7 +4,7 @@ set -e
 git fetch
 git merge --ff-only origin/master
 rm -rf node_modules/
-npm install
+npm install --production
 grunt compile-less
 docker stop huburn
 docker rm huburn
